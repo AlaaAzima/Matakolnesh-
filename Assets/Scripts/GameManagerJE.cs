@@ -15,7 +15,10 @@ public class GameManagerJE : MonoBehaviour
     [SerializeField] private StarRatingJE starRatingSystem;
     [SerializeField] private LevelUnlockJE levelUnlockSystem;
     [SerializeField] private SaveSystemJE saveSystem;
-   
+
+    [Header("GamePanel")]
+    [SerializeField] WLGamePanelJZ WLGamePanelJZ;
+
 
     private void Awake()
     {
@@ -30,7 +33,7 @@ public class GameManagerJE : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    
     public GameData gameData;
     private void Start()
     {
@@ -38,7 +41,7 @@ public class GameManagerJE : MonoBehaviour
         Debug.Log("Loaded Level: " + currentLevel);
         InitializeLevel();
 
-        //remainingEnemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None).Length;
+        remainingEnemies = FindObjectsByType<EnemyLogicJZ>(FindObjectsSortMode.None).Length;
     }
 
     public void EnemyKilled()
@@ -55,6 +58,8 @@ public class GameManagerJE : MonoBehaviour
 
             levelUnlockSystem.UnlockNextLevel(currentLevel);
             saveSystem.Save(gameData);
+
+            WLGamePanelJZ.ShowWin();
         }
     }
 
@@ -67,13 +72,14 @@ public class GameManagerJE : MonoBehaviour
         if (winCondition.CheckLose())
         {
             saveSystem.Save(gameData);
+            WLGamePanelJZ.ShowLose();
         }
     }
 
     public void InitializeLevel()
     {
         isGameOver = false;
-        //remainingEnemies = FindObjectsOfType<Enemy>().Length;
+        remainingEnemies = FindObjectsOfType<EnemyLogicJZ>().Length;
         starRatingSystem.ResetCounter();
         Debug.Log("Level Initialized");
 
