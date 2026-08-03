@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Bow : MonoBehaviour
 {
+    [SerializeField] private StarRatingJE starRatingJE;
+
     [SerializeField] private GameObject arrowPrefab; // Reference to the arrow prefab
     [SerializeField] private Transform shotPoint;   // Reference to the shot point
     [SerializeField] private float arrowSpeed = 20f; // Speed of the arrow
@@ -71,6 +73,7 @@ public class Bow : MonoBehaviour
         GameObject bullet = Instantiate(arrowPrefab, shotPoint.position, shotPoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
+        starRatingJE.ArrowShot();
 
         rb.linearVelocity = shotPoint.right * arrowSpeed;
 
