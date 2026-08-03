@@ -4,12 +4,15 @@ public class EnemyLogicJZ : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Die();
+        if (collision.CompareTag("Arrow"))
+        {
+            Die();
+        }
     }
 
     public void Die()
     {
-        GameManagerJE.Instance.PlayerDied();
+        GameManagerJE.Instance.EnemyKilled();
         Destroy(gameObject);
     }
 }
