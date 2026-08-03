@@ -1,15 +1,7 @@
 using UnityEngine;
 
-public class EnemyLogicJZ : MonoBehaviour
+public class EnemyLogicJZ : MonoBehaviour, IDeath
 {
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Arrow"))
-        {
-            Die();
-        }
-    }
-
     public void Die()
     {
         GameManagerJE.Instance.EnemyKilled();

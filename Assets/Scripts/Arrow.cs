@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Arrow : MonoBehaviour
@@ -9,5 +10,13 @@ public class Arrow : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        IDeath ideath= collision.GetComponent<IDeath>();
+        if (ideath !=null)
+        {
+            ideath.Die();
+           
+        }
+    }
 }
