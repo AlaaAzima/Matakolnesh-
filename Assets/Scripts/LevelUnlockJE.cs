@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class LevelUnlockJE : MonoBehaviour
 {
-    [SerializeField] private int BossRequiredStars = 40;
+    [SerializeField] private int BossRequiredStars = 38;
     public void UnlockNextLevel(int currentLevel)
     {
-        GameManagerJE.Instance.isGameOver = false;
+        //GameManagerJE.Instance.isGameOver = false;
         if (currentLevel == 19)
         {
             if (CanUnlockBoss())
@@ -19,6 +19,9 @@ public class LevelUnlockJE : MonoBehaviour
 
             return;
         }
+
+        GameManagerJE.Instance.gameData.highestUnlockedLevel =
+        Mathf.Max(GameManagerJE.Instance.gameData.highestUnlockedLevel, currentLevel + 1);
         Debug.Log("Level " + (currentLevel + 1) + " Unlocked");
     }
 

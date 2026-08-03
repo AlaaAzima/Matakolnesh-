@@ -23,6 +23,7 @@ public class GameManagerJE : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            Debug.Log("Instance Assigned");
         }
         else
         {
