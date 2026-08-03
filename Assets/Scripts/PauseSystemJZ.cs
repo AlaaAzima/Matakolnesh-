@@ -1,14 +1,10 @@
 using UnityEngine;
-
 public class PauseSystemJZ : MonoBehaviour
 {
     public static PauseSystemJZ Instance { get; private set; }
-
     public bool IsPaused { get; private set; } = false;
-
     [Header("UI")]
     [SerializeField] private GameObject pauseMenuUI;
-
     private void Awake()
     {
         if (Instance == null)
@@ -20,15 +16,14 @@ public class PauseSystemJZ : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     private void Update()
     {
+        if (GameManagerJE.Instance.isGameOver) return;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
         }
     }
-
     public void TogglePause()
     {
         if (IsPaused)
@@ -36,7 +31,6 @@ public class PauseSystemJZ : MonoBehaviour
         else
             Pause();
     }
-
     public void Pause()
     {
         IsPaused = true;
@@ -45,7 +39,6 @@ public class PauseSystemJZ : MonoBehaviour
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(true);
     }
-
     public void Resume()
     {
         IsPaused = false;
