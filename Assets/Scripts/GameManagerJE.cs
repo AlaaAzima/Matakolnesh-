@@ -1,5 +1,5 @@
 using System.Runtime.ConstrainedExecution;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameManagerJE : MonoBehaviour
@@ -36,10 +36,16 @@ public class GameManagerJE : MonoBehaviour
     {
         gameData = saveSystem.Load();
         Debug.Log("Loaded Level: " + currentLevel);
-        //(in OnSceneLoaded)
+        /*in OnSceneLoaded*/
         //InitializeLevel(); 
         //remainingEnemies = FindObjectsByType<EnemyLogicJZ>(FindObjectsSortMode.None).Length;
     }
+
+    public void ArrowShot()
+    {
+        starRatingSystem.ArrowShot();
+    }
+
     public void EnemyKilled()
     {
         remainingEnemies--;
@@ -71,6 +77,7 @@ public class GameManagerJE : MonoBehaviour
     public void InitializeLevel()
     {
         isGameOver = false;
+
         remainingEnemies = FindObjectsOfType<EnemyLogicJZ>().Length;
         starRatingSystem.ResetCounter();
         Debug.Log("Level Initialized");
@@ -83,6 +90,7 @@ public class GameManagerJE : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         WLGamePanelJZ = FindFirstObjectByType<WLGamePanelJZ>();
+        starRatingSystem = FindFirstObjectByType<StarRatingJE>();
         InitializeLevel();
     }
 }

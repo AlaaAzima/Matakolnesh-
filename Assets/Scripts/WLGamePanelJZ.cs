@@ -22,13 +22,10 @@ public class WLGamePanelJZ : MonoBehaviour
     }
     public void Restart()
     {
+        
         Time.timeScale = 1f;
-        GameManagerJE.Instance.InitializeLevel();
-        StartCoroutine(Delay());
-    }
-    IEnumerator Delay()
-    {
-        yield return new WaitForSeconds(0.05f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
+    
 }
