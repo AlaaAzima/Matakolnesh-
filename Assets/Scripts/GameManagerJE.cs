@@ -54,7 +54,7 @@ public class GameManagerJE : MonoBehaviour
             Mathf.Max(gameData.levelStars[currentLevel - 1], stars);
             levelUnlockSystem.UnlockNextLevel(currentLevel);
             saveSystem.Save(gameData);
-            WLGamePanelJZ.ShowWin();
+            WLGamePanelJZ.ShowWin(stars);
         }
     }
     public void PlayerDied()
