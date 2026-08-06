@@ -1324,6 +1324,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715832511}
   m_CullTransparentMesh: 1
+--- !u!1001 &760000891
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1876.1111
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 971.4762
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138103874847798245, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_Name
+      value: GameManagerJE
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
 --- !u!1 &807793499
 GameObject:
   m_ObjectHideFlags: 0
@@ -4106,6 +4163,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0587fc66451b7435ca22c9f25ca8fe6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimationJE
+--- !u!1 &1952649612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952649615}
+  - component: {fileID: 1952649614}
+  - component: {fileID: 1952649613}
+  m_Layer: 0
+  m_Name: StageMenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1952649613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952649612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7aa9f046c8da48f0a8685b6b9d46b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelsUIJE
+  lockedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  unlockedColor: {r: 1, g: 1, b: 1, a: 1}
+  starFilled: {fileID: -1421797311933737301, guid: 76e48ab99779e4369a7b6aa88ef97971, type: 3}
+  starEmpty: {fileID: 4815476061570213978, guid: bd1dee602db984e849be8cf5ce647125, type: 3}
+--- !u!114 &1952649614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952649612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d306167d5734c28a29f558e97fd905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StageMenuUIJE
+  levelButtons: {fileID: 1359088225}
+  levelUI: {fileID: 1952649613}
+  buttons: []
+--- !u!4 &1952649615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952649612}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1876.1111, y: 971.4762, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1953943629
 GameObject:
   m_ObjectHideFlags: 0
@@ -4650,3 +4771,5 @@ SceneRoots:
   - {fileID: 1614238479}
   - {fileID: 501791556}
   - {fileID: 2063083982}
+  - {fileID: 1952649615}
+  - {fileID: 760000891}
