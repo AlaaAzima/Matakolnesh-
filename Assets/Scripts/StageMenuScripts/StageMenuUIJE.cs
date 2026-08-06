@@ -7,7 +7,7 @@ public class StageMenuUIJE : MonoBehaviour
     [SerializeField] private GameObject levelButtons;
     [SerializeField] private LevelsUIJE levelUI;
 
-    private Button[] buttons;
+     [SerializeField] private Button[] buttons;
 
     private void Start()
     {

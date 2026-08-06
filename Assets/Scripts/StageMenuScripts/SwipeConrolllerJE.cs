@@ -3,7 +3,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
-{
+{   
+
     [SerializeField] int maxPage;
     int currentPage;
     Vector3 targetPos;
