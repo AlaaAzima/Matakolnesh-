@@ -23,6 +23,9 @@ public class StageMenuUIJE : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             buttons[i].interactable = (i + 1) <= unlockedLevel;
+
+            int levelIndex = i + 1;
+            buttons[i].onClick.AddListener(() => OpenLevel(levelIndex));
         }
 
         levelUI.UpdateButtons(buttons, unlockedLevel, gameData.levelStars);

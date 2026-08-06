@@ -542,113 +542,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c276af0c653d29e4cb02930f5fc6937d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyLogicJZ
---- !u!1 &302641479
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 302641485}
-  - component: {fileID: 302641484}
-  - component: {fileID: 302641483}
-  - component: {fileID: 302641482}
-  - component: {fileID: 302641481}
-  - component: {fileID: 302641480}
-  m_Layer: 0
-  m_Name: GameManagerJE
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &302641480
+--- !u!114 &302641480 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3838917340351104340, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+  m_PrefabInstance: {fileID: 8433846831617970682}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302641479}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a202e83c7a5d54662856de6e9fda8094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StarRatingJE
---- !u!114 &302641481
+--- !u!114 &302641481 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3481921368028116119, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+  m_PrefabInstance: {fileID: 8433846831617970682}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302641479}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db6393965c1764afbbc12bd803326135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveSystemJE
---- !u!114 &302641482
+--- !u!114 &302641482 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3268409062293361803, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+  m_PrefabInstance: {fileID: 8433846831617970682}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302641479}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf29d7f57f29e4d99966f50e1125e0d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelUnlockJE
-  BossRequiredStars: 40
---- !u!114 &302641483
+--- !u!114 &302641483 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7155154009740691516, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+  m_PrefabInstance: {fileID: 8433846831617970682}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302641479}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d644c363ba9a46a78d65832d9baa92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinAndLoseJE
---- !u!114 &302641484
+--- !u!114 &302641484 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4324238098613005469, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+  m_PrefabInstance: {fileID: 8433846831617970682}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302641479}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e5d7b28031574693bb5058aedbc284a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManagerJE
-  remainingEnemies: 3
-  isGameOver: 0
-  currentLevel: 1
-  winCondition: {fileID: 302641483}
-  starRatingSystem: {fileID: 302641480}
-  levelUnlockSystem: {fileID: 302641482}
-  saveSystem: {fileID: 302641481}
-  gameData:
-    highestUnlockedLevel: 0
-    levelStars: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
---- !u!4 &302641485
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302641479}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,6 +1451,7 @@ MonoBehaviour:
   starRatingSystem: {fileID: 1899487654}
   levelUnlockSystem: {fileID: 1899487652}
   saveSystem: {fileID: 1899487653}
+  WLGamePanelJZ: {fileID: 0}
   gameData:
     highestUnlockedLevel: 0
     levelStars: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -1601,7 +1550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b33cb69fe11ca4bae5c52e4d1f398b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bow
-  starRatingJE: {fileID: 302641480}
   arrowPrefab: {fileID: 5895948663963413927, guid: fb15fe7bc8547d1479014b182eeddf48, type: 3}
   shotPoint: {fileID: 1207975303}
   arrowSpeed: 20
@@ -1626,6 +1574,63 @@ Transform:
   - {fileID: 1156180012}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8433846831617970682
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181883429380510952, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138103874847798245, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: m_Name
+      value: GameManagerJE
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1636,7 +1641,7 @@ SceneRoots:
   - {fileID: 1772927027}
   - {fileID: 133745600}
   - {fileID: 1451079880}
-  - {fileID: 302641485}
+  - {fileID: 8433846831617970682}
   - {fileID: 1899487650}
   - {fileID: 231215562}
   - {fileID: 1191517320}
