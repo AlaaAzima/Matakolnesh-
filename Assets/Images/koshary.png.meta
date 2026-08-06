@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 328620aa6d7af9842a59accf5ef192bb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4744096326175287147
+    second: koshary_0
+  - first:
+      213: -3170979519086494454
+    second: koshary_1
+  - first:
+      213: 2322658115852992654
+    second: koshary_2
+  - first:
+      213: 4795818509398844957
+    second: koshary_3
+  - first:
+      213: 7315026499975153968
+    second: koshary_4
+  - first:
+      213: 7351634372111075490
+    second: koshary_5
+  - first:
+      213: 4662913118143376787
+    second: koshary_6
+  - first:
+      213: 9099687591283709975
+    second: koshary_7
+  - first:
+      213: 6260999217753712492
+    second: koshary_8
+  - first:
+      213: -1453594255286144965
+    second: koshary_9
+  - first:
+      213: 5059617322273916109
+    second: koshary_10
+  - first:
+      213: -611497466400060353
+    second: koshary_11
+  - first:
+      213: 5545088092762080426
+    second: koshary_12
+  - first:
+      213: -1883846941919736145
+    second: koshary_13
+  - first:
+      213: 104109069644929485
+    second: koshary_14
+  - first:
+      213: -137853407640372651
+    second: koshary_15
+  - first:
+      213: -9111333910424004224
+    second: koshary_16
+  - first:
+      213: -2218448171109791935
+    second: koshary_17
+  - first:
+      213: -4941322156555434853
+    second: koshary_18
+  - first:
+      213: 8912533843688342768
+    second: koshary_19
+  - first:
+      213: 993304059390054140
+    second: koshary_20
+  - first:
+      213: 3702968306702029234
+    second: koshary_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: koshary_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 116
+        width: 47
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5981612d685992eb0800000000000000
+      internalID: -4744096326175287147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 103
+        width: 235
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d7fce8dea6ef3d0800000000000000
+      internalID: -3170979519086494454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 145
+        width: 917
+        height: 808
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80881a104dbb3020800000000000000
+      internalID: 2322658115852992654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_3
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 104
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1626f3668b2e8240800000000000000
+      internalID: 4795818509398844957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_4
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 130
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039869558d1348560800000000000000
+      internalID: 7315026499975153968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_5
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 127
+        width: 366
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a88b34c280460660800000000000000
+      internalID: 7351634372111075490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_6
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 105
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39de17996cef5b040800000000000000
+      internalID: 4662913118143376787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_7
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 95
+        width: 57
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 718de7de6a5984e70800000000000000
+      internalID: 9099687591283709975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_8
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 106
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c676539cd9983e650800000000000000
+      internalID: 6260999217753712492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_9
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 81
+        width: 117
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30fe1ee9bbc3dbe0800000000000000
+      internalID: -1453594255286144965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_10
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 98
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4cc89c52f573640800000000000000
+      internalID: 5059617322273916109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_11
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 104
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c4c2e4b468387f0800000000000000
+      internalID: -611497466400060353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_12
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 113
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa40551cd3c14fc40800000000000000
+      internalID: 5545088092762080426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_13
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 87
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae0ba7ff2b3bd5e0800000000000000
+      internalID: -1883846941919736145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_14
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 79
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc91512b5aed17100800000000000000
+      internalID: 104109069644929485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_15
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 91
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ab48e5e0f361ef0800000000000000
+      internalID: -137853407640372651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_16
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 80
+        width: 49
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089d437151a0e8180800000000000000
+      internalID: -9111333910424004224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_17
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 75
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147c268642d7631e0800000000000000
+      internalID: -2218448171109791935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_18
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 92
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b940fb9cda5ec6bb0800000000000000
+      internalID: -4941322156555434853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_19
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 84
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f4c0b96f4eafab70800000000000000
+      internalID: 8912533843688342768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_20
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 92
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfec5ed77cce8cd00800000000000000
+      internalID: 993304059390054140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koshary_21
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 69
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b111874e06936330800000000000000
+      internalID: 3702968306702029234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      koshary_0: -4744096326175287147
+      koshary_1: -3170979519086494454
+      koshary_10: 5059617322273916109
+      koshary_11: -611497466400060353
+      koshary_12: 5545088092762080426
+      koshary_13: -1883846941919736145
+      koshary_14: 104109069644929485
+      koshary_15: -137853407640372651
+      koshary_16: -9111333910424004224
+      koshary_17: -2218448171109791935
+      koshary_18: -4941322156555434853
+      koshary_19: 8912533843688342768
+      koshary_2: 2322658115852992654
+      koshary_20: 993304059390054140
+      koshary_21: 3702968306702029234
+      koshary_3: 4795818509398844957
+      koshary_4: 7315026499975153968
+      koshary_5: 7351634372111075490
+      koshary_6: 4662913118143376787
+      koshary_7: 9099687591283709975
+      koshary_8: 6260999217753712492
+      koshary_9: -1453594255286144965
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
