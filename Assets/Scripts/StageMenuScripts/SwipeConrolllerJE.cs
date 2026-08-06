@@ -9,8 +9,10 @@ public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
     Vector3 targetPos;
     [SerializeField] Vector3 pageStep;
     [SerializeField] RectTransform levelPagesRect;
+
     [SerializeField] float tweenTime;
     [SerializeField] LeanTweenType tweenType;
+
     float dragThreshold ;
     [SerializeField]  Image[] barImage;
     [SerializeField] Sprite barClosed, barOpen;
@@ -18,6 +20,7 @@ public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
 
     private void Awake()
     {
+
         currentPage = 1;
         targetPos = levelPagesRect.localPosition;
         dragThreshold = Screen.width /15f ;
@@ -54,20 +57,17 @@ public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
     }
 
     public void OnEndDrag(PointerEventData eventData)
-{
-    float dragDistance = eventData.position.x - eventData.pressPosition.x;
-
-    if (Mathf.Abs(dragDistance) > dragThreshold)
     {
-        if (dragDistance > 0) PreviousPage();
-        else NextPage();
+        if(Mathf.Abs(eventData.position.x - eventData.pressPosition.x) > dragThreshold)
+        {
+            if (eventData.position.x > eventData.pressPosition.x) PreviousPage();
+            else NextPage();
+        }
+        else
+        {
+            MovePage();
+        }
     }
-    else
-    {
-        MovePage(); 
-    }
-}
-
 
     
     void UpdateBar()
