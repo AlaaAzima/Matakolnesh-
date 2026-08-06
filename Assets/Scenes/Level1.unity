@@ -323,7 +323,7 @@ RectTransform:
   m_GameObject: {fileID: 89340349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2125063962}
@@ -1154,7 +1154,7 @@ RectTransform:
   m_GameObject: {fileID: 531948019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2125063962}
@@ -1229,7 +1229,7 @@ RectTransform:
   m_GameObject: {fileID: 589354418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2125063962}
@@ -2966,7 +2966,7 @@ MonoBehaviour:
   - {fileID: 531948020}
   - {fileID: 589354419}
   - {fileID: 89340350}
-  fullStar: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  fullStar: {fileID: -785983430564313981, guid: c61219cc36f1bab4bab0d4f37efeab57, type: 3}
   emptyStar: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
