@@ -3,14 +3,17 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
-{
+{   
+
     [SerializeField] int maxPage;
     int currentPage;
     Vector3 targetPos;
     [SerializeField] Vector3 pageStep;
     [SerializeField] RectTransform levelPagesRect;
+
     [SerializeField] float tweenTime;
     [SerializeField] LeanTweenType tweenType;
+
     float dragThreshold ;
     [SerializeField]  Image[] barImage;
     [SerializeField] Sprite barClosed, barOpen;
@@ -18,6 +21,7 @@ public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
 
     private void Awake()
     {
+
         currentPage = 1;
         targetPos = levelPagesRect.localPosition;
         dragThreshold = Screen.width /15f ;
@@ -55,9 +59,9 @@ public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if(Mathf.Abs(eventData.delta.x - eventData.position.x) > dragThreshold)
+        if(Mathf.Abs(eventData.position.x - eventData.pressPosition.x) > dragThreshold)
         {
-            if (eventData.delta.x > eventData.pressPosition.x) PreviousPage();
+            if (eventData.position.x > eventData.pressPosition.x) PreviousPage();
             else NextPage();
         }
         else
