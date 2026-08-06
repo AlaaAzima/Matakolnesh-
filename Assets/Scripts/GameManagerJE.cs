@@ -16,6 +16,8 @@ public class GameManagerJE : MonoBehaviour
     [SerializeField] private SaveSystemJE saveSystem;
     [Header("GamePanel")]
     [SerializeField] WLGamePanelJZ WLGamePanelJZ;
+    
+
     private void Awake()
     {
         if (Instance == null)
@@ -71,7 +73,8 @@ public class GameManagerJE : MonoBehaviour
         if (winCondition.CheckLose())
         {
             saveSystem.Save(gameData);
-            WLGamePanelJZ.ShowLose();
+            //WLGamePanelJZ.ShowLose();
+            CameraFadeJZ.Instance.TriggerDeathSequence();
         }
     }
     public void InitializeLevel()
@@ -91,6 +94,7 @@ public class GameManagerJE : MonoBehaviour
     {
         WLGamePanelJZ = FindFirstObjectByType<WLGamePanelJZ>();
         starRatingSystem = FindFirstObjectByType<StarRatingJE>();
+        
         InitializeLevel();
     }
 }
