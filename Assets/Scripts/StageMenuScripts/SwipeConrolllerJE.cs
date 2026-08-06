@@ -54,17 +54,20 @@ public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
     }
 
     public void OnEndDrag(PointerEventData eventData)
+{
+    float dragDistance = eventData.position.x - eventData.pressPosition.x;
+
+    if (Mathf.Abs(dragDistance) > dragThreshold)
     {
-        if(Mathf.Abs(eventData.delta.x - eventData.position.x) > dragThreshold)
-        {
-            if (eventData.delta.x > eventData.pressPosition.x) PreviousPage();
-            else NextPage();
-        }
-        else
-        {
-            MovePage();
-        }
+        if (dragDistance > 0) PreviousPage();
+        else NextPage();
     }
+    else
+    {
+        MovePage(); 
+    }
+}
+
 
     
     void UpdateBar()
