@@ -80,7 +80,6 @@ public class GameManagerJE : MonoBehaviour
     public void InitializeLevel()
     {
         isGameOver = false;
-
         remainingEnemies = FindObjectsOfType<EnemyLogicJZ>().Length;
         starRatingSystem.ResetCounter();
         Debug.Log("Level Initialized");

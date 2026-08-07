@@ -1,13 +1,20 @@
 using UnityEngine;
-
+using System;
 public class StarRatingJE : MonoBehaviour
 {
-    private int arrowsUsed;
+    [SerializeField] private UIHandlerJE uiHandler;
+    public int arrowsUsed;
+    public static event Action<int> OnArrowCountChanged;
 
+    void Start()
+    {
+        uiHandler = FindFirstObjectByType<UIHandlerJE>();
+    }
     public void ArrowShot()
     {
         arrowsUsed++;
         Debug.Log("Arrows Used: " + arrowsUsed);
+        OnArrowCountChanged?.Invoke(arrowsUsed);
     }
 
     public int CalculateStars()
@@ -24,8 +31,7 @@ public class StarRatingJE : MonoBehaviour
     public void ResetCounter()
     {
         arrowsUsed = 0;
-
         Debug.Log("Arrows Used Reset to: " + arrowsUsed);
-
+        OnArrowCountChanged?.Invoke(arrowsUsed);
     }
 }
