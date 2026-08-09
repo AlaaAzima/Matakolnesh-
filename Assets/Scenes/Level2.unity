@@ -149,7 +149,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 236814029}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1565,7 +1565,7 @@ GameObject:
   - component: {fileID: 914635217}
   - component: {fileID: 914635216}
   - component: {fileID: 914635215}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Wall '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2010,7 +2010,7 @@ GameObject:
   - component: {fileID: 1176639509}
   - component: {fileID: 1176639508}
   - component: {fileID: 1176639507}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall  (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2326,7 +2326,7 @@ GameObject:
   - component: {fileID: 1289918863}
   - component: {fileID: 1289918862}
   - component: {fileID: 1289918861}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall  (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2486,9 +2486,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StarUIJZ
   stars:
-  - {fileID: 1199237587}
-  - {fileID: 578029647}
-  - {fileID: 1605592921}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   fullStar: {fileID: -785983430564313981, guid: c61219cc36f1bab4bab0d4f37efeab57, type: 3}
   emptyStar: {fileID: 19655639707874961, guid: 407685b494bb70f419bbfd7cf3b83fa3, type: 3}
 --- !u!224 &1355332118
@@ -2503,13 +2503,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1392307824}
-  - {fileID: 267218719}
-  - {fileID: 1199237585}
-  - {fileID: 578029645}
-  - {fileID: 1605592923}
-  - {fileID: 187358417}
-  - {fileID: 236814029}
   - {fileID: 1837471686}
   m_Father: {fileID: 886545644}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2565,9 +2558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1392307824}
-  - component: {fileID: 1392307826}
-  - component: {fileID: 1392307825}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2588,6 +2579,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1986121751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1428769368
 GameObject:
   m_ObjectHideFlags: 0
@@ -3324,7 +3320,7 @@ GameObject:
   - component: {fileID: 1821980845}
   - component: {fileID: 1821980844}
   - component: {fileID: 1821980846}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3573,7 +3569,7 @@ GameObject:
   - component: {fileID: 1923687053}
   - component: {fileID: 1923687052}
   - component: {fileID: 1923687051}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall  (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3710,7 +3706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1986121751}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3737,6 +3733,7 @@ Transform:
   - {fileID: 914635217}
   - {fileID: 2000888233}
   - {fileID: 1821980845}
+  - {fileID: 1392307824}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1998952648
@@ -3750,7 +3747,7 @@ GameObject:
   - component: {fileID: 1998952651}
   - component: {fileID: 1998952650}
   - component: {fileID: 1998952649}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall  (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3889,7 +3886,7 @@ GameObject:
   - component: {fileID: 2000888233}
   - component: {fileID: 2000888235}
   - component: {fileID: 2000888234}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall  (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4305,3 +4302,5 @@ SceneRoots:
   - {fileID: 688981969}
   - {fileID: 1986121751}
   - {fileID: 1669941624}
+  - {fileID: 103148108}
+  - {fileID: 886545644}
