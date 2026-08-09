@@ -1088,6 +1088,8 @@ GameObject:
   m_Component:
   - component: {fileID: 688981969}
   - component: {fileID: 688981968}
+  - component: {fileID: 688981971}
+  - component: {fileID: 688981970}
   m_Layer: 0
   m_Name: Bow
   m_TagString: Untagged
@@ -1110,9 +1112,6 @@ MonoBehaviour:
   arrowPrefab: {fileID: 5895948663963413927, guid: fb15fe7bc8547d1479014b182eeddf48, type: 3}
   shotPoint: {fileID: 1902626201}
   arrowSpeed: 20
-  point: {fileID: 5945050426229104282, guid: cfb42f26dea221446a98708bf0389d94, type: 3}
-  numberOfPoints: 100
-  spaceBetweenPoints: 0.025
 --- !u!4 &688981969
 Transform:
   m_ObjectHideFlags: 0
@@ -1131,6 +1130,33 @@ Transform:
   - {fileID: 659796271}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &688981970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688981967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcad028d4607c334ba75702b7509d79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrajectoryPredictor
+  pointPrefab: {fileID: 5945050426229104282, guid: cfb42f26dea221446a98708bf0389d94, type: 3}
+  numberOfPoints: 10
+  spaceBetweenPoints: 0.1
+--- !u!114 &688981971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688981967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95c0f6f8681fe441aea0126c526c9e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BowInput
 --- !u!1 &825713834
 GameObject:
   m_ObjectHideFlags: 0
