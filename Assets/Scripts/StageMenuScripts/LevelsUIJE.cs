@@ -24,22 +24,49 @@ public class LevelsUIJE : MonoBehaviour
         }
     }
 
+
     void UpdateStars(Button button, int[] levelStars, int levelNumber, bool unlocked)
+{
+    Transform starsContainer = button.transform.Find("StarsContainer");
+    if (starsContainer == null) return;
+
+    starsContainer.gameObject.SetActive(unlocked);
+    if (!unlocked) return;
+
+    int starsEarned = (levelNumber - 1 < levelStars.Length)
+        ? levelStars[levelNumber - 1]
+        : 0;
+
+    for (int s = 0; s < starsContainer.childCount; s++)
     {
-        Transform starsContainer = button.transform.Find("Stars");
-        if (starsContainer == null) return;
+        Image starImage = starsContainer.GetChild(s).GetComponent<Image>();
+        if (starImage == null) continue;
 
-        int starsEarned = (unlocked && levelNumber - 1 < levelStars.Length)
-            ? levelStars[levelNumber - 1]
-            : 0;
-
-        for (int s = 0; s < starsContainer.childCount; s++)
-        {
-            Image starImage = starsContainer.GetChild(s).GetComponent<Image>();
-            if (starImage == null) continue;
-
-            starImage.gameObject.SetActive(unlocked);
-            starImage.sprite = s < starsEarned ? starFilled : starEmpty;
-        }
+        starImage.sprite = s < starsEarned ? starFilled : starEmpty;
     }
+}
+
+
+    // void UpdateStars(Button button, int[] levelStars, int levelNumber, bool unlocked)
+    // {
+    //     Transform starsContainer = button.transform.Find("StarsContainer");
+    //     if (starsContainer == null) return;
+
+    //     int starsEarned = (unlocked && levelNumber - 1 < levelStars.Length)
+    //         ? levelStars[levelNumber - 1]
+    //         : 0;
+
+    //     for (int s = 0; s < starsContainer.childCount; s++)
+    //     {
+    //         Image starImage = starsContainer.GetChild(s).GetComponent<Image>();
+    //         if (starImage == null) continue;
+
+    //         starImage.gameObject.SetActive(unlocked);
+
+    //         //starImage.sprite = s < starsEarned ? starFilled : starEmpty;
+
+    //         
+    //      
+    //     }
+    // }
 }

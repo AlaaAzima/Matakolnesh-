@@ -1,52 +1,40 @@
 using UnityEngine;
+
+[RequireComponent(typeof(BowInput))]
+[RequireComponent(typeof(TrajectoryPredictor))]
 public class Bow : MonoBehaviour
 {
-    //[SerializeField] private StarRatingJE starRatingJE;
-    [SerializeField] private GameObject arrowPrefab; // Reference to the arrow prefab
-    [SerializeField] private Transform shotPoint;   // Reference to the shot point
-    [SerializeField] private float arrowSpeed = 20f; // Speed of the arrow
-    //======================================
-    [SerializeField] private GameObject point;
-    private GameObject[] points;
-    [SerializeField] private int numberOfPoints = 10;
-    [SerializeField] private float spaceBetweenPoints = 0.1f;
-    //======================================
-    private void Start()
+    [SerializeField] private GameObject arrowPrefab;
+    [SerializeField] private Transform shotPoint;
+    [SerializeField] private float arrowSpeed = 20f;
+
+    private BowInput bowInput;
+    private TrajectoryPredictor trajectoryPredictor;
+
+    private void Awake()
     {
-        points = new GameObject[numberOfPoints];
-        for (int i = 0; i < numberOfPoints; i++)
-        {
-            points[i] = Instantiate(point, shotPoint.position, Quaternion.identity);
-        }
+        bowInput = GetComponent<BowInput>();
+        trajectoryPredictor = GetComponent<TrajectoryPredictor>();
     }
-    void SetTrajectoryVisible(bool visible)
+
+    private void OnEnable()
     {
-        for (int i = 0; i < numberOfPoints; i++)
-        {
-            points[i].SetActive(visible);
-        }
+        bowInput.OnFireHeld += HandleFireHeld;
+        bowInput.OnFireReleased += Shoot;
     }
+
+    private void OnDisable()
+    {
+        bowInput.OnFireHeld -= HandleFireHeld;
+        bowInput.OnFireReleased -= Shoot;
+    }
+
     void Update()
     {
         if (GameManagerJE.Instance.isGameOver || PauseSystemJZ.Instance.IsPaused) return;
         AimGun();
-        if (Input.GetButton("Fire1"))
-        {
-            SetTrajectoryVisible(true);
-            for (int i = 0; i < numberOfPoints; i++)
-            {
-                points[i].transform.position = PointPosition(i * spaceBetweenPoints);
-            }
-        }
-        else
-        {
-            SetTrajectoryVisible(false);
-        }
-        if (Input.GetButtonUp("Fire1"))
-        {
-            Shoot();
-        }
     }
+
     void AimGun()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -55,18 +43,22 @@ public class Bow : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
+
+    void HandleFireHeld()
+    {
+        trajectoryPredictor.ShowTrajectory(shotPoint, arrowSpeed);
+    }
+
     void Shoot()
     {
-        GameObject bullet = Instantiate(arrowPrefab, shotPoint.position, shotPoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        //starRatingJE.ArrowShot(); 
+        trajectoryPredictor.HideTrajectory();
+
+        GameObject arrow = Instantiate(arrowPrefab, shotPoint.position, shotPoint.rotation);
+        Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
+
         GameManagerJE.Instance.ArrowShot();
         rb.linearVelocity = shotPoint.right * arrowSpeed;
-        Destroy(bullet, 2f); // Destroy bullet after 2 seconds
-    }
-    Vector2 PointPosition(float t)
-    {
-        Vector2 position = (Vector2)shotPoint.position + ((Vector2)shotPoint.right * arrowSpeed * t);
-        return position;
+
+        //Destroy(arrow, 2f);
     }
 }

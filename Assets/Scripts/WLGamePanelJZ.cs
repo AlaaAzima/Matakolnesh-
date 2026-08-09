@@ -23,5 +23,20 @@ public class WLGamePanelJZ : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         
     }
+
+    public void NextLevelJE()
+    {
+        int nextLevel = GameManagerJE.Instance.currentLevel + 1;
+
+        if (nextLevel > 20)
+
+        {
+            SceneManager.LoadScene("StageMenu"); //if it the last level then go to the stagemenu
+            return;
+        }
+          GameManagerJE.Instance.currentLevel = nextLevel;
+
+        SceneManager.LoadScene("Level" + nextLevel);
+    }
     
 }
