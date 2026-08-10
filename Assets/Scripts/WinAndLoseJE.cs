@@ -8,7 +8,8 @@ public class WinAndLoseJE : MonoBehaviour
 
         if (GameManagerJE.Instance.remainingEnemies <= 0 &&
 
-            !GameManagerJE.Instance.isGameOver)
+            !GameManagerJE.Instance.isGameOver &&
+            GameManagerJE.Instance.activeArrowCount <= 0)
 
         {
 
@@ -20,7 +21,7 @@ public class WinAndLoseJE : MonoBehaviour
         return false;
     }
 
-      public bool CheckLose()
+    public bool CheckLose()
 
     {
 

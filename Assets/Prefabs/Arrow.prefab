@@ -180,8 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f942f1623e4b06409f3d1aa95455c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Arrow
-  lifetime: 2
+  maxBounces: 5
   wallLayer:
     serializedVersion: 2
     m_Bits: 128
-  stickCheckRadius: 2
+  destroyDelayAfterStick: 2
