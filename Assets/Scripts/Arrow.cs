@@ -1,23 +1,41 @@
-using System.Collections;
 using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    [SerializeField] private float lifetime = 2f;
+    [Header("Bounce Settings")]
+
+    [SerializeField] private int maxBounces = 4;
+
+    [Header("Targeting & Layers")]
     [SerializeField] private LayerMask wallLayer;
-    [SerializeField] private float stickCheckRadius = 5f;
+
+    [Header("Despawn Settings")]
+    [SerializeField] private float destroyDelayAfterStick = 2f;
 
     private Rigidbody2D rb;
+    private int currentBounceCount = 0;
     private bool isStuck = false;
 
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        StartCoroutine(StickToNearestWallRoutine());
+    }
+    private void Start()
+    {
+        if (GameManagerJE.Instance != null)
+        {
+            GameManagerJE.Instance.RegisterArrow();
+        }
     }
 
-    void Update()
+    private void OnDestroy()
+    {
+        if (GameManagerJE.Instance != null)
+        {
+            GameManagerJE.Instance.UnregisterArrow();
+        }
+    }
+    private void Update()
     {
 
         if (!isStuck && rb.linearVelocity.sqrMagnitude > 0.01f)
@@ -27,63 +45,48 @@ public class Arrow : MonoBehaviour
         }
     }
 
-    private IEnumerator StickToNearestWallRoutine()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isStuck) return;
 
-        yield return new WaitForSeconds(lifetime);
 
-        if (!isStuck)
+        if (((1 << collision.gameObject.layer) & wallLayer) != 0)
         {
-            StickToWall();
-        }
-    }
-
-    private void StickToWall()
-    {
-
-        Collider2D wallCollider = Physics2D.OverlapCircle(transform.position, stickCheckRadius, wallLayer);
-
-        if (wallCollider != null)
-        {
-
-            Vector2 closestPoint = wallCollider.ClosestPoint(transform.position);
+            currentBounceCount++;
 
 
-            transform.position = closestPoint;
-
-
-            rb.linearVelocity = Vector2.zero;
-            rb.angularVelocity = 0f;
-            rb.bodyType = RigidbodyType2D.Kinematic;
-
-            isStuck = true;
-
-
-            Destroy(gameObject, 2f);
-        }
-        else
-        {
-
-            Destroy(gameObject);
+            if (currentBounceCount >= maxBounces)
+            {
+                StickToWall(collision);
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (isStuck) return;
 
-        IDeath ideath = collision.GetComponent<IDeath>();
-        if (ideath != null)
+
+        if (collision.TryGetComponent<IDeath>(out IDeath ideath))
         {
             ideath.Die();
         }
     }
 
-
-    private void OnDrawGizmosSelected()
+    private void StickToWall(Collision2D collision)
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, stickCheckRadius);
+        isStuck = true;
+
+
+        ContactPoint2D contact = collision.GetContact(0);
+        transform.position = contact.point;
+
+
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+
+
+        Destroy(gameObject, destroyDelayAfterStick);
     }
 }

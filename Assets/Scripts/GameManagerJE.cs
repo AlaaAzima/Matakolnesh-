@@ -16,8 +16,24 @@ public class GameManagerJE : MonoBehaviour
     [SerializeField] private SaveSystemJE saveSystem;
     [Header("GamePanel")]
     [SerializeField] WLGamePanelJZ WLGamePanelJZ;
-    
+    //================Alaa================
 
+
+    public int activeArrowCount { get; private set; } = 0;
+
+    public void RegisterArrow()
+    {
+        activeArrowCount++;
+    }
+
+    public void UnregisterArrow()
+    {
+        activeArrowCount--;
+        if (activeArrowCount < 0) activeArrowCount = 0;
+        winCondition.CheckWin();
+    }
+
+    //================Alaa================
     private void Awake()
     {
         if (Instance == null)
@@ -93,7 +109,7 @@ public class GameManagerJE : MonoBehaviour
     {
         WLGamePanelJZ = FindFirstObjectByType<WLGamePanelJZ>();
         starRatingSystem = FindFirstObjectByType<StarRatingJE>();
-        
+
         InitializeLevel();
     }
 }
