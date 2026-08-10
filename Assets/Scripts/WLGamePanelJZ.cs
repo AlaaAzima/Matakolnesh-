@@ -11,7 +11,9 @@ public class WLGamePanelJZ : MonoBehaviour
     [SerializeField] private StarUIJZ starUI;
     public void ShowWin(int earnedStars)
     {
+        Debug.Log("ShowWin called, winPanel active before: " + winPanel.activeSelf);
         winPanel.SetActive(true);
+        Debug.Log("winPanel active after: " + winPanel.activeSelf);
         Time.timeScale = 0f;
         starUI.DisplayStars(earnedStars);
     }
