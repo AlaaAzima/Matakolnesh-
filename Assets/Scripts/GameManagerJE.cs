@@ -30,7 +30,10 @@ public class GameManagerJE : MonoBehaviour
     {
         activeArrowCount--;
         if (activeArrowCount < 0) activeArrowCount = 0;
-        winCondition.CheckWin();
+        if(winCondition.CheckWin())
+        {
+            GameWin();
+        }
     }
 
     //================Alaa================
@@ -68,16 +71,31 @@ public class GameManagerJE : MonoBehaviour
     {
         remainingEnemies--;
         Debug.Log("Remaining Enemies: " + remainingEnemies);
+
         if (winCondition.CheckWin())
         {
-            isGameOver = true;
+            GameWin();
+        }
+    }
 
-            int stars = starRatingSystem.CalculateStars();
+    public void GameWin()
+    {
+        if (isGameOver) return;
 
-            gameData.levelStars[currentLevel - 1] =
-            Mathf.Max(gameData.levelStars[currentLevel - 1], stars);
-            levelUnlockSystem.UnlockNextLevel(currentLevel);
-            saveSystem.Save(gameData);
+        Debug.Log("Entered win block");
+        isGameOver = true;
+
+        int stars = starRatingSystem.CalculateStars();
+
+        Debug.Log("Stars calculated: " + stars);
+        gameData.levelStars[currentLevel - 1] =
+        Mathf.Max(gameData.levelStars[currentLevel - 1], stars);
+        levelUnlockSystem.UnlockNextLevel(currentLevel);
+        saveSystem.Save(gameData);
+
+        Debug.Log("About to call ShowWin, WLGamePanelJZ is null? " + (WLGamePanelJZ == null));
+        if (WLGamePanelJZ != null)
+        {
             WLGamePanelJZ.ShowWin(stars);
         }
     }
