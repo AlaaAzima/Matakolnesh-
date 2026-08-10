@@ -82,18 +82,15 @@ public class GameManagerJE : MonoBehaviour
     {
         if (isGameOver) return;
 
-        Debug.Log("Entered win block");
         isGameOver = true;
 
         int stars = starRatingSystem.CalculateStars();
 
-        Debug.Log("Stars calculated: " + stars);
         gameData.levelStars[currentLevel - 1] =
         Mathf.Max(gameData.levelStars[currentLevel - 1], stars);
         levelUnlockSystem.UnlockNextLevel(currentLevel);
         saveSystem.Save(gameData);
 
-        Debug.Log("About to call ShowWin, WLGamePanelJZ is null? " + (WLGamePanelJZ == null));
         if (WLGamePanelJZ != null)
         {
             WLGamePanelJZ.ShowWin(stars);
