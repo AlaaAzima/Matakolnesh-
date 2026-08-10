@@ -11,9 +11,8 @@ public class WLGamePanelJZ : MonoBehaviour
     [SerializeField] private StarUIJZ starUI;
     public void ShowWin(int earnedStars)
     {
-        Debug.Log("ShowWin called, winPanel active before: " + winPanel.activeSelf);
         winPanel.SetActive(true);
-        Debug.Log("winPanel active after: " + winPanel.activeSelf);
+
         Time.timeScale = 0f;
         starUI.DisplayStars(earnedStars);
     }
@@ -26,6 +25,16 @@ public class WLGamePanelJZ : MonoBehaviour
         
     }
 
+    public void StageMenu()
+    {
+        SceneManager.LoadScene("StageMenu");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void NextLevelJE()
     {
         int nextLevel = GameManagerJE.Instance.currentLevel + 1;
@@ -33,7 +42,7 @@ public class WLGamePanelJZ : MonoBehaviour
         if (nextLevel > 20)
 
         {
-            SceneManager.LoadScene("StageMenu"); //if it the last level then go to the stagemenu
+            StageMenu(); //if it the last level then go to the stagemenu
             return;
         }
           GameManagerJE.Instance.currentLevel = nextLevel;
