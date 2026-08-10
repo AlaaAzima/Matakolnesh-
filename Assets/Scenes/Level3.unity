@@ -4093,7 +4093,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3556829739560359866, guid: c9f45678fffbf4011a8242b6371217ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4908,6 +4908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c276af0c653d29e4cb02930f5fc6937d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyLogicJZ
+  destroyDelay: 1.1
 --- !u!58 &955254939
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5729,6 +5730,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  startDelayDuration: 2
   holdDuration: 0.5
 --- !u!4 &1714212233
 Transform:
