@@ -11,7 +11,10 @@ public class CameraFadeJZ : MonoBehaviour
         new Keyframe(0.5f, 0.5f, -1.5f, -1.5f),
         new Keyframe(1, 0)
     );
-    public float holdDuration = 0.5f;
+
+    [Header("Timing Configurations")]
+    public float startDelayDuration = 2f; // <-- Time to wait BEFORE fading out
+    public float holdDuration = 0.5f;     // Time to stay black before reload
 
     private float alpha = 0f;
     private Texture2D texture;
@@ -19,6 +22,8 @@ public class CameraFadeJZ : MonoBehaviour
     private float time = 0f;
     private bool reloadPending = false;
     private float holdTimer = 0f;
+    private float delayTimer = 0f;         // <-- Tracks the initial delay
+    private bool isWaitingToFade = false;  // <-- State flag for the delay
 
     private void Awake()
     {
@@ -36,15 +41,18 @@ public class CameraFadeJZ : MonoBehaviour
         texture = new Texture2D(1, 1);
         SetAlpha(1f);   // start fully black
         time = 0f;
-        direction = 1;  // fade OUT: curve(0)=1 -> curve(1)=0
+        direction = 1;  // fade OUT on game start
     }
 
     public void TriggerDeathSequence()
     {
         reloadPending = true;
         holdTimer = 0f;
-        time = 1f;
-        direction = -1; // fade IN to black: curve(1)=0 -> curve(0)=1
+
+        // Start the 2-second waiting period instead of fading immediately
+        delayTimer = 0f;
+        isWaitingToFade = true;
+        direction = 0;
     }
 
     private void SetAlpha(float a)
@@ -58,6 +66,20 @@ public class CameraFadeJZ : MonoBehaviour
     {
         if (alpha > 0f) GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), texture);
 
+        // Phase 1: Wait for 2 seconds before doing anything
+        if (isWaitingToFade)
+        {
+            delayTimer += Time.unscaledDeltaTime;
+            if (delayTimer >= startDelayDuration)
+            {
+                isWaitingToFade = false;
+                time = 1f;
+                direction = -1; // Now start fading IN to black
+            }
+            return;
+        }
+
+        // Phase 2: Handle the active fade transition
         if (direction != 0)
         {
             time += direction * Time.unscaledDeltaTime * speedScale;
@@ -74,6 +96,7 @@ public class CameraFadeJZ : MonoBehaviour
                 if (reloadPending) holdTimer = 0f;
             }
         }
+        // Phase 3: Screen is fully black, hold briefly then reload
         else if (reloadPending)
         {
             holdTimer += Time.unscaledDeltaTime;
@@ -100,6 +123,7 @@ public class CameraFadeJZ : MonoBehaviour
     {
         SetAlpha(1f);
         time = 0f;
-        direction = 1; // fade OUT on every scene load
+        direction = 1; // fade OUT completely on every scene load
+        isWaitingToFade = false;
     }
 }
