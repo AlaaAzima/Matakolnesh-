@@ -16,6 +16,9 @@ public class Arrow : MonoBehaviour
     private int currentBounceCount = 0;
     private bool isStuck = false;
 
+    private float upperBound = 5.91f;
+    private float rightBound = 9.61f;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -37,7 +40,7 @@ public class Arrow : MonoBehaviour
     }
     private void Update()
     {
-
+        Bound();
         if (!isStuck && rb.linearVelocity.sqrMagnitude > 0.01f)
         {
             float angle = Mathf.Atan2(rb.linearVelocity.y, rb.linearVelocity.x) * Mathf.Rad2Deg;
@@ -93,5 +96,16 @@ public class Arrow : MonoBehaviour
 
 
         Destroy(gameObject, destroyDelayAfterStick);
+    }
+
+    private void Bound()
+    {
+        if((transform.position.y> upperBound) || (transform.position.y < -upperBound))
+        {
+            Destroy(gameObject);
+        }
+        if((transform.position.x>rightBound)||(transform.position.x < -rightBound))
+        { Destroy(gameObject); }
+               
     }
 }
