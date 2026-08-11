@@ -1295,6 +1295,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55596c03307a6f24ba53846f58f543b7, type: 3}
+--- !u!1 &452728702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1486142953339528290, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
+  m_PrefabInstance: {fileID: 1096040760}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &575841546 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8885417492586587504, guid: 3b49e0adfcf325c40938c11c0ddcf24f, type: 3}
@@ -1467,7 +1472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74478310116702445ac0a47759120856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseSystemJZ
-  pauseMenuUI: {fileID: 2090164707172426486, guid: de792edf38400d448af989dff4bfd8ce, type: 3}
+  pauseMenuUI: {fileID: 452728702}
 --- !u!4 &822771509
 Transform:
   m_ObjectHideFlags: 0
