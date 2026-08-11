@@ -9,12 +9,20 @@ public class EnemyLogicJZ : MonoBehaviour, IDeath
     private Rigidbody2D rb;
     private bool isDead = false;
 
+    private float upperBound = 5.91f;
+    private float rightBound = 9.61f;
+
     private static readonly int DieTriggerHash = Animator.StringToHash("Death");
     private void Start()
     {
         animator = GetComponent<Animator>();
         enemyCollider = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        Bound();
     }
 
     public void Die()
@@ -48,4 +56,22 @@ public class EnemyLogicJZ : MonoBehaviour, IDeath
         Destroy(gameObject, destroyDelay);
     }
 
+    private void Bound()
+    {
+        if ((transform.position.y > upperBound) || (transform.position.y < -upperBound))
+        {
+            Destroy(gameObject);
+        }
+        if ((transform.position.x > rightBound) || (transform.position.x < -rightBound))
+        { Destroy(gameObject); }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Salsa"))
+        {
+            Die();
+        }
+    }
 }
