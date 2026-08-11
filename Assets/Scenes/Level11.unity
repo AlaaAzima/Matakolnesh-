@@ -211,6 +211,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &202264178 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4585329529580325524, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
+  m_PrefabInstance: {fileID: 1949201523}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c76e72a5dcf4536a5f797eec37cc9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIHandlerJE
+--- !u!114 &202264179 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2384790316911657258, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
+  m_PrefabInstance: {fileID: 1949201523}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e939274e514b545ac4a1a4d6dc807f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WLGamePanelJZ
 --- !u!1001 &349661784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -281,7 +303,7 @@ GameObject:
   - component: {fileID: 682202850}
   - component: {fileID: 682202853}
   m_Layer: 7
-  m_Name: Square
+  m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -547,7 +569,7 @@ PrefabInstance:
     - target: {fileID: 16576060607072885, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: uiHandler
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 202264178}
     - target: {fileID: 650273462700137426, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: m_LocalPosition.x
       value: 901.7644
@@ -591,7 +613,7 @@ PrefabInstance:
     - target: {fileID: 1903363903251772718, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: WLGamePanelJZ
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 202264179}
     - target: {fileID: 7026888915237056816, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: m_Name
       value: GameManagerJE
@@ -8082,6 +8104,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b7d722f56a694acdad92b6771ddd950, type: 3}
+--- !u!1 &1665801365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9132159218806922556, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
+  m_PrefabInstance: {fileID: 1949201523}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1949201523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8097,7 +8124,7 @@ PrefabInstance:
     - target: {fileID: 2384790316911657258, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
       propertyPath: winPanel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1665801365}
     - target: {fileID: 6203114463047113758, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
