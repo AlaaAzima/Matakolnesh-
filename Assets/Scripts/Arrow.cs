@@ -71,6 +71,11 @@ public class Arrow : MonoBehaviour
         {
             ideath.Die();
         }
+
+        if(collision.TryGetComponent<IInteractable>(out IInteractable interactable))
+        {
+            interactable.Interact();
+        }
     }
 
     private void StickToWall(Collision2D collision)
