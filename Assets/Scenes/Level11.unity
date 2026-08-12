@@ -552,6 +552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7471036684444496131, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1542393611}
     - target: {fileID: 8186349926660686193, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -637,6 +641,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
+--- !u!114 &1357766808 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4391037457714524255, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
+  m_PrefabInstance: {fileID: 1149201451}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c76e72a5dcf4536a5f797eec37cc9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIHandlerJE
 --- !u!1001 &1527009505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -693,6 +708,10 @@ PrefabInstance:
       propertyPath: WLGamePanelJZ
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3144246701616785046, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
+      propertyPath: uiHandler
+      value: 
+      objectReference: {fileID: 1357766808}
     - target: {fileID: 7026888915237056816, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: m_Name
       value: GameManagerJE
