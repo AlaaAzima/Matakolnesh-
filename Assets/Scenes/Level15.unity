@@ -360,6 +360,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 118672132464652541, guid: e3fe8e0596c94415291edf625d82ba4b, type: 3}
+      propertyPath: pauseMenuUI
+      value: 
+      objectReference: {fileID: 1699259258}
     - target: {fileID: 2051738531788025322, guid: e3fe8e0596c94415291edf625d82ba4b, type: 3}
       propertyPath: pauseMenuUI
       value: 
@@ -367,6 +371,10 @@ PrefabInstance:
     - target: {fileID: 2658470121542804802, guid: e3fe8e0596c94415291edf625d82ba4b, type: 3}
       propertyPath: m_Name
       value: PauseSystemJZ
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658470121542804802, guid: e3fe8e0596c94415291edf625d82ba4b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4642053995372521924, guid: e3fe8e0596c94415291edf625d82ba4b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -493,6 +501,10 @@ PrefabInstance:
     - target: {fileID: 4033309763155153239, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033309763155153239, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8186349926660686193, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
       propertyPath: m_Pivot.x
@@ -6789,7 +6801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3364876323777200946, guid: 7b7d722f56a694acdad92b6771ddd950, type: 3}
       propertyPath: m_TileMatrixArray.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3364876323777200946, guid: 7b7d722f56a694acdad92b6771ddd950, type: 3}
       propertyPath: m_Tiles.Array.data[54].first.x
@@ -7961,7 +7973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3364876323777200946, guid: 7b7d722f56a694acdad92b6771ddd950, type: 3}
       propertyPath: m_TileMatrixArray.Array.data[0].m_RefCount
-      value: 124
+      value: 121
       objectReference: {fileID: 0}
     - target: {fileID: 3364876323777200946, guid: 7b7d722f56a694acdad92b6771ddd950, type: 3}
       propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e00
