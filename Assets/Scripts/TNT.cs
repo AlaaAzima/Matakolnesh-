@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class TNTLogic : MonoBehaviour
 {
-    [Header("TNT Settings")]
-    [Tooltip("العدو المباشر اللي عايزة القنبلة تدمره (اختياري)")]
-    [SerializeField] private GameObject targetEnemy;
+    [Header("TNT Targets")]
+    [SerializeField] private GameObject[] targetEnemy;
 
-    [Tooltip("تاغ السهم اللي لما يلمس القنبلة تنفجر")]
-    [SerializeField] private string arrowTag = "Arrow"; // غيري التاج على حسب مشروعك
+
+    [SerializeField] private GameObject[] targetWalls;
+
+    [Header("Settings")]
+    [SerializeField] private string arrowTag = "Arrow";
 
     [Header("Explosion Effects (Optional)")]
     [SerializeField] private GameObject explosionEffectPrefab;
@@ -17,7 +19,6 @@ public class TNTLogic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // التأكد إن اللي لمس القنبلة هو السهم وإنها مانفجرتش قبل كده
         if (collision.CompareTag(arrowTag) && !isExploded)
         {
             Explode();
@@ -28,29 +29,44 @@ public class TNTLogic : MonoBehaviour
     {
         isExploded = true;
 
-        // 1. تدمير العدو المفيّد في الـ Inspector لو موجود
+
         if (targetEnemy != null)
         {
-            // البحث عن كلاس العدو أو الإنترفيس IDeath وتفعيل دالة الموت
-            IDeath enemyDeath = targetEnemy.GetComponent<IDeath>();
-            if (enemyDeath != null)
+            foreach (GameObject enemy in targetEnemy)
             {
-                enemyDeath.Die();
-            }
-            else
-            {
-                // لو العدو معندوش IDeath هيتم مسحه مباشرة
-                Destroy(targetEnemy);
+                if (enemy == null) continue;
+
+                IDeath enemyDeath = enemy.GetComponent<IDeath>();
+                if (enemyDeath != null)
+                {
+                    enemyDeath.Die();
+                }
+                else
+                {
+                    Destroy(enemy);
+                }
             }
         }
 
-        // 2. إظهار تأثير الانفجار لو حاطة Prefab للانفجار
+
+        if (targetWalls != null)
+        {
+            foreach (GameObject wall in targetWalls)
+            {
+                if (wall != null)
+                {
+                    Destroy(wall);
+                }
+            }
+        }
+
+
         if (explosionEffectPrefab != null)
         {
             Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
         }
 
-        // 3. تدمير القنبلة نفسها
+
         Destroy(gameObject, destroyDelay);
     }
 }
