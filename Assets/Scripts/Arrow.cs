@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Arrow : MonoBehaviour
 {
@@ -29,7 +30,33 @@ public class Arrow : MonoBehaviour
         {
             GameManagerJE.Instance.RegisterArrow();
         }
+        StartCoroutine(IgnorePlayerTemporarily());
     }
+
+
+    private IEnumerator IgnorePlayerTemporarily()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            Collider2D playerCollider = player.GetComponent<Collider2D>();
+            Collider2D arrowCollider = GetComponent<Collider2D>();
+
+            if (playerCollider != null && arrowCollider != null)
+            {
+
+                Physics2D.IgnoreCollision(arrowCollider, playerCollider, true);
+
+
+                yield return new WaitForSeconds(0.2f);
+
+
+                Physics2D.IgnoreCollision(arrowCollider, playerCollider, false);
+            }
+        }
+    }
+
+
 
     private void OnDestroy()
     {
@@ -75,7 +102,7 @@ public class Arrow : MonoBehaviour
             ideath.Die();
         }
 
-        if(collision.TryGetComponent<IInteractable>(out IInteractable interactable))
+        if (collision.TryGetComponent<IInteractable>(out IInteractable interactable))
         {
             interactable.Interact();
         }
@@ -100,12 +127,12 @@ public class Arrow : MonoBehaviour
 
     private void Bound()
     {
-        if((transform.position.y> upperBound) || (transform.position.y < -upperBound))
+        if ((transform.position.y > upperBound) || (transform.position.y < -upperBound))
         {
             Destroy(gameObject);
         }
-        if((transform.position.x>rightBound)||(transform.position.x < -rightBound))
+        if ((transform.position.x > rightBound) || (transform.position.x < -rightBound))
         { Destroy(gameObject); }
-               
+
     }
 }
