@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TNTJZ : MonoBehaviour
 {
+    [SerializeField] private GameObject[] targetEnemy;
     [SerializeField] private float explosionRadius = 3f;
     [SerializeField] private float explosionForce = 500f;
     [SerializeField] private LayerMask affectedLayers;
@@ -41,6 +42,24 @@ public class TNTJZ : MonoBehaviour
             rb.AddForce(direction * appliedForce, ForceMode2D.Impulse);
         }
 
+         if (targetEnemy != null)
+        {
+            foreach (GameObject enemy in targetEnemy)
+            {
+                if (enemy == null) continue;
+
+                IDeath enemyDeath = enemy.GetComponent<IDeath>();
+                if (enemyDeath != null)
+                {
+                    enemyDeath.Die();
+                }
+                else
+                {
+                    Destroy(enemy);
+                }
+            }
+        }
+
         if (explosionEffect != null)
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
 
@@ -52,6 +71,8 @@ public class TNTJZ : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
+
+    
 
    
 }
