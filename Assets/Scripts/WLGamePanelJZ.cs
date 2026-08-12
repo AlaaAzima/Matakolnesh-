@@ -5,24 +5,41 @@ public class WLGamePanelJZ : MonoBehaviour
 {
     [Header("Panels")]
     [SerializeField] GameObject winPanel;
-    
+
 
     [Header("StarUI")]
     [SerializeField] private StarUIJZ starUI;
+    [Header("Win Settings")]
+    [SerializeField] private float winDelay = 0.3f;
+
+
     public void ShowWin(int earnedStars)
     {
-        winPanel.SetActive(true);
-
-        Time.timeScale = 0f;
-        starUI.DisplayStars(earnedStars);
+        StartCoroutine(ShowWinCoroutine(earnedStars));
     }
-   
+
+
+    private IEnumerator ShowWinCoroutine(int earnedStars)
+    {
+
+        yield return new WaitForSeconds(winDelay);
+
+
+        winPanel.SetActive(true);
+        Time.timeScale = 0f;
+
+        if (starUI != null)
+        {
+            starUI.DisplayStars(earnedStars);
+        }
+    }
+
     public void Restart()
     {
-        
+
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
+
     }
 
     public void StageMenu()
@@ -45,9 +62,9 @@ public class WLGamePanelJZ : MonoBehaviour
             StageMenu(); //if it the last level then go to the stagemenu
             return;
         }
-          GameManagerJE.Instance.currentLevel = nextLevel;
+        GameManagerJE.Instance.currentLevel = nextLevel;
 
         SceneManager.LoadScene("Level" + nextLevel);
     }
-    
+
 }
