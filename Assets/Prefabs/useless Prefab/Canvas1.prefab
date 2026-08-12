@@ -1910,7 +1910,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &8058299932030207711
 MonoBehaviour:
@@ -1966,6 +1966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WLGamePanelJZ
   winPanel: {fileID: 9132159218806922556}
   starUI: {fileID: 7525486424421241890}
+  winDelay: 0.3
 --- !u!114 &4585329529580325524
 MonoBehaviour:
   m_ObjectHideFlags: 0

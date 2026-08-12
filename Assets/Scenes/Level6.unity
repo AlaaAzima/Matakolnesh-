@@ -1360,7 +1360,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -4626,20 +4626,44 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2318412832140130087, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7732339528079374402, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1883779880532169829, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 781848739}
     - target: {fileID: 6203114463047113758, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
       propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203114463047113758, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203114463047113758, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203114463047113758, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203114463047113758, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203114463047113758, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203114463047113758, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203114463047113758, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203114463047113758, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6203114463047113758, guid: 060b63dee2a4d4caf862255835a0c47c, type: 3}
@@ -4894,10 +4918,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 963005671895068547, guid: 55596c03307a6f24ba53846f58f543b7, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 3556829739560359866, guid: c9f45678fffbf4011a8242b6371217ea, type: 3}
     - target: {fileID: 2075423514477267649, guid: 55596c03307a6f24ba53846f58f543b7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4985,14 +5005,6 @@ PrefabInstance:
     - target: {fileID: 3181386004915574866, guid: 55596c03307a6f24ba53846f58f543b7, type: 3}
       propertyPath: m_Name
       value: Background Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3181386004915574866, guid: 55596c03307a6f24ba53846f58f543b7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5079162583251192357, guid: 55596c03307a6f24ba53846f58f543b7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
