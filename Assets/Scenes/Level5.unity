@@ -652,6 +652,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &863287479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1486142953339528290, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
+  m_PrefabInstance: {fileID: 661792075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &951451794
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +929,11 @@ PrefabInstance:
     - target: {fileID: 2066372434335200833, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: WLGamePanelJZ
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2043871417}
+    - target: {fileID: 3144246701616785046, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
+      propertyPath: uiHandler
+      value: 
+      objectReference: {fileID: 2043871416}
     - target: {fileID: 7066198657308481642, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -35480,6 +35489,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55596c03307a6f24ba53846f58f543b7, type: 3}
+--- !u!114 &2043871416 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4391037457714524255, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
+  m_PrefabInstance: {fileID: 661792075}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c76e72a5dcf4536a5f797eec37cc9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIHandlerJE
+--- !u!114 &2043871417 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7635452588075949121, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
+  m_PrefabInstance: {fileID: 661792075}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e939274e514b545ac4a1a4d6dc807f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WLGamePanelJZ
 --- !u!1 &2083624666
 GameObject:
   m_ObjectHideFlags: 0
@@ -35509,7 +35540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74478310116702445ac0a47759120856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseSystemJZ
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 863287479}
 --- !u!4 &2083624668
 Transform:
   m_ObjectHideFlags: 0
