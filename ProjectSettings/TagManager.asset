@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Salsa
   - Arrow
+  - TNT
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Arrow
   - Wall
   - Ground
-  - 
+  - TNT
   - 
   - 
   - 
