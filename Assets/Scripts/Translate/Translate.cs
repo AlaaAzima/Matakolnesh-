@@ -1,29 +1,47 @@
-
 using UnityEngine;
 
 public class Translate : MonoBehaviour
 {
-   
-    [SerializeField] float speed = 2;
-    [SerializeField] float dir =1;
+    private enum Axis { Horizontal, Vertical }
 
+    [SerializeField] private Axis moveAxis = Axis.Horizontal;
+    [SerializeField] private float speed = 2f;
+    [SerializeField] private float minLimit = -5f; // Left if Horizontal, Down if Vertical
+    [SerializeField] private float maxLimit = -1f; // Right if Horizontal, Up if Vertical
 
-    void Update()
+    private float dir = 1f;
+
+    private void Update()
     {
-
-        transform.Translate(Vector2.right * speed * Time.deltaTime * dir);
-
-        if (transform.position.x >= -1)
+        if (moveAxis == Axis.Horizontal)
         {
-            
-           transform.position = new Vector3(-1, transform.position.y, transform.position.z);
-           dir = -1;
+            transform.position += Vector3.right * speed * Time.deltaTime * dir;
+
+            if (transform.position.x >= maxLimit)
+            {
+                transform.position = new Vector3(maxLimit, transform.position.y, transform.position.z);
+                dir = -1f;
+            }
+            else if (transform.position.x <= minLimit)
+            {
+                transform.position = new Vector3(minLimit, transform.position.y, transform.position.z);
+                dir = 1f;
+            }
         }
-        else if(transform.position.x <= -5)
+        else // Vertical
         {
-             transform.position = new Vector3(-5, transform.position.y, transform.position.z);
-            dir =1;
+            transform.position += Vector3.up * speed * Time.deltaTime * dir;
+
+            if (transform.position.y >= maxLimit)
+            {
+                transform.position = new Vector3(transform.position.x, maxLimit, transform.position.z);
+                dir = -1f;
+            }
+            else if (transform.position.y <= minLimit)
+            {
+                transform.position = new Vector3(transform.position.x, minLimit, transform.position.z);
+                dir = 1f;
+            }
         }
     }
-
 }
