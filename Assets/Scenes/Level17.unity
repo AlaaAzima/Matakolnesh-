@@ -830,9 +830,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2318412832140130087, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 973764013}
-    - targetCorrespondingSourceObject: {fileID: 2318412832140130087, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 973764012}
   m_SourcePrefab: {fileID: 100100000, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
 --- !u!1 &973764010 stripped
@@ -852,7 +849,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973764010}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -891,33 +888,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.9760075, y: 4.8504486}
   m_EdgeRadius: 0
---- !u!50 &973764013
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973764010}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1001 &1219159311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30211,34 +30181,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 627428446560242520, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 104
-      objectReference: {fileID: 0}
-    - target: {fileID: 627428446560242520, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -46
-      objectReference: {fileID: 0}
-    - target: {fileID: 1486142953339528290, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4033309763155153239, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4654406686161142515, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -23
       objectReference: {fileID: 0}
     - target: {fileID: 7471036684444496131, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 927212044}
-    - target: {fileID: 7471036684444496131, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8186349926660686193, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
       propertyPath: m_Pivot.x
       value: 0
