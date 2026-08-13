@@ -24,6 +24,7 @@ public class ArcherAim : MonoBehaviour
     void AimAtMouse()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = transform.position.z;
         Vector2 direction = mousePos - transform.position;
 
 
@@ -44,5 +45,6 @@ public class ArcherAim : MonoBehaviour
         int index = Mathf.RoundToInt(t * (bowSprites.Length - 1));
 
         spriteRenderer.sprite = bowSprites[index];
+        Debug.Log("Angle: " + angle + " | Index: " + index);
     }
 }

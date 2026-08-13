@@ -10,6 +10,8 @@ public class PlayerDeathJZ : MonoBehaviour, IDeath
     private bool isDead = false;
 
 
+    private ArcherAim archerAim;
+
     private static readonly int DieTriggerHash = Animator.StringToHash("IsDead");
 
     private void Awake()
@@ -17,6 +19,15 @@ public class PlayerDeathJZ : MonoBehaviour, IDeath
         animator = GetComponent<Animator>();
         playerCollider = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
+
+
+        archerAim = GetComponent<ArcherAim>();
+
+
+        if (animator != null)
+        {
+            animator.enabled = false;
+        }
     }
 
     public void Die()
@@ -24,18 +35,23 @@ public class PlayerDeathJZ : MonoBehaviour, IDeath
         if (isDead) return;
         isDead = true;
 
-
         if (GameManagerJE.Instance != null)
         {
             GameManagerJE.Instance.PlayerDied();
         }
 
 
-        if (animator != null)
+        if (archerAim != null)
         {
-            animator.SetTrigger(DieTriggerHash);
+            archerAim.enabled = false;
         }
 
+
+        if (animator != null)
+        {
+            animator.enabled = true;
+            animator.SetTrigger(DieTriggerHash);
+        }
 
         if (playerCollider != null) playerCollider.enabled = false;
         if (rb != null)
@@ -43,7 +59,6 @@ public class PlayerDeathJZ : MonoBehaviour, IDeath
             rb.linearVelocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
-
 
         Destroy(gameObject, destroyDelay);
     }
