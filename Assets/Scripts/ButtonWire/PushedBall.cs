@@ -12,8 +12,4 @@ public class PushedBall : MonoBehaviour
         }
     }
 
-
-
-
-
 }
