@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BoundJZ : MonoBehaviour
 {
-    [SerializeField] float upperBound;
-    [SerializeField] float rightBound;
+     float upperBound = 5.61f;
+     float rightBound = 9.32f;
 
     private void Update()
     {
