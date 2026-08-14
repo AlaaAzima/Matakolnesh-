@@ -53,6 +53,7 @@ public class EnemyLogicJZ : MonoBehaviour, IDeath
         }
 
 
+        SoundManager.PlaySound(SoundType.EnemyDeath);
         Destroy(gameObject, destroyDelay);
     }
 

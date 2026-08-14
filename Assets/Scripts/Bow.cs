@@ -54,6 +54,7 @@ public class Bow : MonoBehaviour
         trajectoryPredictor.HideTrajectory();
 
         GameObject arrow = Instantiate(arrowPrefab, shotPoint.position, shotPoint.rotation);
+        SoundManager.PlaySound(SoundType.PlayerShoot);
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
 
         GameManagerJE.Instance.ArrowShot();

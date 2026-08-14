@@ -28,6 +28,7 @@ public class TNTLogic : MonoBehaviour
     private void Explode()
     {
         isExploded = true;
+        SoundManager.PlaySound(SoundType.TNT);
 
 
         if (targetEnemy != null)

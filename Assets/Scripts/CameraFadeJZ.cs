@@ -42,6 +42,7 @@ public class CameraFadeJZ : MonoBehaviour
         SetAlpha(1f);   // start fully black
         time = 0f;
         direction = 1;  // fade OUT on game start
+        SoundManager.PlaySound(SoundType.LoseSound);
     }
 
     public void TriggerDeathSequence()

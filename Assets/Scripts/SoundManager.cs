@@ -1,19 +1,19 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 
 public enum SoundType
 {  
-    PlayerThrough,     
-    PlayerDealth,     
+    PlayerShoot,     //done
+    PlayerDealth,     //done
     SpoonCollison,
-    EnemyDeath,      
+    EnemyDeath,      //done
     ObstacaleInteraction,       
-    TNT,  
-    WinSound,       
-    LoseSound,         
-    PauseAndResume,        
-    PressButton,        
+    TNT,   //done
+    WinSound,       //done
+    LoseSound,         //done       
+    PressButton,
+    stars        
 
 }
 
@@ -57,6 +57,28 @@ public class SoundManager : MonoBehaviour
     {
         HandlePlaylist();
     }
+
+    private void OnEnable()
+{
+    SceneManager.sceneLoaded += OnSceneLoaded;
+}
+
+private void OnDisable()
+{
+    SceneManager.sceneLoaded -= OnSceneLoaded;
+}
+
+private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+{
+    if (scene.name == "MainMenu" || scene.name == "StageMenu")
+    {
+        StartPlaylist();
+    }
+    else
+    {
+        StopMusic();
+    }
+}
 
     /*  PLAYLIST  */
 

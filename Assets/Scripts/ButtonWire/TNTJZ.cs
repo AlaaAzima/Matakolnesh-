@@ -25,6 +25,8 @@ public class TNTJZ : MonoBehaviour
         if (hasExploded) return;
         hasExploded = true;
 
+        SoundManager.PlaySound(SoundType.TNT);
+
         Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, explosionRadius, affectedLayers);
 
         foreach (Collider2D hit in hitObjects)

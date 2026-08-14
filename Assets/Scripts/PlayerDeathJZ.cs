@@ -60,6 +60,7 @@ public class PlayerDeathJZ : MonoBehaviour, IDeath
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
 
+        SoundManager.PlaySound(SoundType.PlayerDealth);
         Destroy(gameObject, destroyDelay);
     }
 }

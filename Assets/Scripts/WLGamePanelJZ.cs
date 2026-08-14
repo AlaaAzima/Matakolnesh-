@@ -31,6 +31,7 @@ public class WLGamePanelJZ : MonoBehaviour
         if (starUI != null)
         {
             starUI.DisplayStars(earnedStars);
+             SoundManager.PlaySound(SoundType.WinSound);
         }
     }
 
