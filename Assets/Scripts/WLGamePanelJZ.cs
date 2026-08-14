@@ -15,6 +15,7 @@ public class WLGamePanelJZ : MonoBehaviour
 
     public void ShowWin(int earnedStars)
     {
+        CameraShakeJE.Instance.Shake();
         StartCoroutine(ShowWinCoroutine(earnedStars));
     }
 

@@ -45,6 +45,6 @@ public class ArcherAim : MonoBehaviour
         int index = Mathf.RoundToInt(t * (bowSprites.Length - 1));
 
         spriteRenderer.sprite = bowSprites[index];
-        Debug.Log("Angle: " + angle + " | Index: " + index);
+       // Debug.Log("Angle: " + angle + " | Index: " + index);
     }
 }
