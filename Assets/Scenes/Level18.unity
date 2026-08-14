@@ -852,6 +852,7 @@ GameObject:
   - component: {fileID: 649966401}
   - component: {fileID: 649966403}
   - component: {fileID: 649966402}
+  - component: {fileID: 649966405}
   m_Layer: 0
   m_Name: 'Main Camera '
   m_TagString: MainCamera
@@ -977,6 +978,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &649966405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649966400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12743defe0f454d6b9c3749d4ad163ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraShakeJE
+  shakeDuration: 0.2
+  shakeMagnitude: 0.15
+  dampingSpeed: 1.5
 --- !u!1 &752028236 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2318412832140130087, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}

@@ -5,9 +5,9 @@ public class CameraShakeJE : MonoBehaviour
 {
     public static CameraShakeJE Instance { get; private set; }
 
-    [SerializeField] private float shakeDuration = 0.2f;
-    [SerializeField] private float shakeMagnitude = 0.15f;
-    [SerializeField] private float dampingSpeed = 1.5f;
+   private float shakeDuration = 0.2f;
+     private float shakeMagnitude = 0.2f;
+     private float dampingSpeed = 2f;
 
     private Vector3 originalPosition;
     private Coroutine shakeCoroutine;

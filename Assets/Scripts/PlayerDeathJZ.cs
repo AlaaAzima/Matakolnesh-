@@ -61,6 +61,7 @@ public class PlayerDeathJZ : MonoBehaviour, IDeath
         }
 
         SoundManager.PlaySound(SoundType.PlayerDealth);
+        CameraShakeJE.Instance.Shake();
         Destroy(gameObject, destroyDelay);
     }
 }
