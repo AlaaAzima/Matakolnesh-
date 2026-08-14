@@ -83,7 +83,7 @@ public class Arrow : MonoBehaviour
         if (((1 << collision.gameObject.layer) & wallLayer) != 0)
         {
             currentBounceCount++;
-
+            SoundManager.PlaySound(SoundType.SpoonCollison);
 
             if (currentBounceCount >= maxBounces)
             {

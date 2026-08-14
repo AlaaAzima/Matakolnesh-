@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 155226834}
   - component: {fileID: 155226833}
   - component: {fileID: 155226832}
+  - component: {fileID: 155226835}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -240,6 +241,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155226830}
   m_CullTransparentMesh: 1
+--- !u!114 &155226835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155226830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705a10e4822e74ef6842f64182c4ecef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
 --- !u!1 &467243449
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,8 +836,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2568bda1052434eefa24dd6623331e6f, type: 3}
   - {fileID: 8300000, guid: d95bbac40d4564121b4a9375bea69065, type: 3}
   - {fileID: 8300000, guid: 491055f0ecb634555ad9625eedcf873b, type: 3}
-  - {fileID: 8300000, guid: d95bbac40d4564121b4a9375bea69065, type: 3}
-  - {fileID: 8300000, guid: 491055f0ecb634555ad9625eedcf873b, type: 3}
   - {fileID: 8300000, guid: 1698d3962ded5450b9215fde4c023d4e, type: 3}
   - {fileID: 8300000, guid: c68791f08268a4e30ae32f4b95f985c4, type: 3}
   - {fileID: 8300000, guid: 49ae119f43a1c4338a74c3ffb32b3a8f, type: 3}
@@ -945,6 +956,7 @@ GameObject:
   - component: {fileID: 1184385581}
   - component: {fileID: 1184385580}
   - component: {fileID: 1184385579}
+  - component: {fileID: 1184385582}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -1054,6 +1066,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184385577}
   m_CullTransparentMesh: 1
+--- !u!114 &1184385582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184385577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705a10e4822e74ef6842f64182c4ecef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
 --- !u!1 &1482614731
 GameObject:
   m_ObjectHideFlags: 0

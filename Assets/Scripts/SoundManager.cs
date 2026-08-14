@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public enum SoundType
 {  
     PlayerShoot,     //done
     PlayerDealth,     //done
-    SpoonCollison,
+    SpoonCollison,  //done
     EnemyDeath,      //done
     ObstacaleInteraction,       
     TNT,   //done
@@ -51,6 +52,7 @@ public class SoundManager : MonoBehaviour
     private void Start()
     {
         StartPlaylist();
+         //AddButtonSounds();
     }
 
     private void Update()
@@ -70,15 +72,32 @@ private void OnDisable()
 
 private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 {
+
     if (scene.name == "MainMenu" || scene.name == "StageMenu")
     {
-        StartPlaylist();
+        if (!playlistActive) StartPlaylist();
     }
     else
     {
         StopMusic();
     }
 }
+
+// private void AddButtonSounds()
+// {
+//     Button[] buttons = FindObjectsByType<Button>(
+//         FindObjectsInactive.Include,
+//         FindObjectsSortMode.None
+//     );
+
+//     foreach (Button button in buttons)
+//     {
+//         button.onClick.AddListener(() =>
+//         {
+//             PlaySound(SoundType.PressButton);
+//         });
+//     }
+// }
 
     /*  PLAYLIST  */
 
