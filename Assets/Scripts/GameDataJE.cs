@@ -1,7 +1,7 @@
 
 [System.Serializable]
-public class GameData 
+public class GameData
 {
-     public int highestUnlockedLevel = 1;
+     public int highestUnlockedLevel = 0;
      public int[] levelStars = new int[20];
 }
