@@ -5,6 +5,7 @@ public class WLGamePanelJZ : MonoBehaviour
 {
     [Header("Panels")]
     [SerializeField] GameObject winPanel;
+    [SerializeField] private WinPanelAnimJE winPanelAnimation;
 
 
     [Header("StarUI")]
@@ -27,13 +28,16 @@ public class WLGamePanelJZ : MonoBehaviour
 
 
         winPanel.SetActive(true);
-        Time.timeScale = 0f;
 
         if (starUI != null)
         {
             starUI.DisplayStars(earnedStars);
              SoundManager.PlaySound(SoundType.WinSound);
         }
+        
+        Time.timeScale = 0f;
+
+        winPanelAnimation.PlayAnimation(earnedStars);
     }
 
     public void Restart()
