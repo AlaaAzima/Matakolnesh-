@@ -13,7 +13,7 @@ public enum SoundType
     TNT,   //done
     WinSound,       //done
     LoseSound,         //done       
-    PressButton,
+    PressButton,    //done       
     stars        
 
 }
@@ -52,7 +52,6 @@ public class SoundManager : MonoBehaviour
     private void Start()
     {
         StartPlaylist();
-         //AddButtonSounds();
     }
 
     private void Update()
@@ -60,44 +59,27 @@ public class SoundManager : MonoBehaviour
         HandlePlaylist();
     }
 
-    private void OnEnable()
-{
-    SceneManager.sceneLoaded += OnSceneLoaded;
-}
-
-private void OnDisable()
-{
-    SceneManager.sceneLoaded -= OnSceneLoaded;
-}
-
-private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-{
-
-    if (scene.name == "MainMenu" || scene.name == "StageMenu")
+    void OnEnable()
     {
-        if (!playlistActive) StartPlaylist();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
-    else
+
+    void OnDisable()
     {
-        StopMusic();
+       SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-}
 
-// private void AddButtonSounds()
-// {
-//     Button[] buttons = FindObjectsByType<Button>(
-//         FindObjectsInactive.Include,
-//         FindObjectsSortMode.None
-//     );
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 
-//     foreach (Button button in buttons)
-//     {
-//         button.onClick.AddListener(() =>
-//         {
-//             PlaySound(SoundType.PressButton);
-//         });
-//     }
-// }
+    {
+        Debug.Log("CURRENT SCENE: " + scene.name);
+
+    if (scene.name != "MainMenu" && scene.name != "Loading..." && scene.name != "StageMenu")
+        {
+            StopMusic();
+        
+        }
+    }
 
     /*  PLAYLIST  */
 
