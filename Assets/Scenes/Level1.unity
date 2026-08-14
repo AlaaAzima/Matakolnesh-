@@ -5775,12 +5775,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 907446252}
     - target: {fileID: 3635291437028333828, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.24783002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635291437028333828, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39216825
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635291437028333828, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635291437028333828, guid: 30e54e245db33e849a59dc042a236635, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.25
+      value: 2.02
       objectReference: {fileID: 0}
     - target: {fileID: 3635291437028333828, guid: 30e54e245db33e849a59dc042a236635, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.07
+      value: -3.01
       objectReference: {fileID: 0}
     - target: {fileID: 3635291437028333828, guid: 30e54e245db33e849a59dc042a236635, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5814,6 +5826,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3635291437028333828, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558514769807777917, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: m_Size.x
+      value: 4.7145815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558514769807777917, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: m_Size.y
+      value: 4.534624
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558514769807777917, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.78988266
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558514769807777917, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.20236433
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558514769807777917, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 9.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558514769807777917, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 9.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064835178097656934, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 47914125946255306, guid: 0a86d832a2e5345e7ab0563cc80f55d2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
