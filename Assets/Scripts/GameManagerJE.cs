@@ -30,13 +30,14 @@ public class GameManagerJE : MonoBehaviour
     {
         activeArrowCount--;
         if (activeArrowCount < 0) activeArrowCount = 0;
-        if(winCondition.CheckWin())
+        if (winCondition.CheckWin())
         {
             GameWin();
         }
     }
 
     //================Alaa================
+
     private void Awake()
     {
         if (Instance == null)
@@ -44,7 +45,10 @@ public class GameManagerJE : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             Debug.Log("Instance Assigned");
-            SceneManager.sceneLoaded += OnSceneLoaded; // subscribe
+            SceneManager.sceneLoaded += OnSceneLoaded;
+
+            // Load game data when the GameManager is initialized
+            LoadGameData();
         }
         else
         {
@@ -52,9 +56,26 @@ public class GameManagerJE : MonoBehaviour
         }
     }
 
+    public void LoadGameData()
+    {
+        if (saveSystem != null)
+        {
+            gameData = saveSystem.Load();
+        }
+
+
+        if (gameData == null || gameData.highestUnlockedLevel < 1)
+        {
+            if (gameData == null) gameData = new GameData();
+            gameData.highestUnlockedLevel = 1;
+        }
+    }
+
     public GameData gameData;
     private void Start()
     {
+        // gameData = new GameData { highestUnlockedLevel = 1 };
+        // saveSystem.Save(gameData);
         gameData = saveSystem.Load();
         Debug.Log("Loaded Level: " + currentLevel);
         /*in OnSceneLoaded*/

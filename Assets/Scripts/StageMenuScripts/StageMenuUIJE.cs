@@ -7,28 +7,45 @@ public class StageMenuUIJE : MonoBehaviour
     [SerializeField] private GameObject levelButtons;
     [SerializeField] private LevelsUIJE levelUI;
 
-     [SerializeField] private Button[] buttons;
-
+    [SerializeField] private Button[] buttons;
     private void Start()
     {
+
+        if (GameManagerJE.Instance != null)
+        {
+            GameManagerJE.Instance.LoadGameData();
+        }
+
         ButtonsToArray();
         RefreshUI();
     }
 
     private void RefreshUI()
     {
+        if (GameManagerJE.Instance == null || GameManagerJE.Instance.gameData == null) return;
+
         GameData gameData = GameManagerJE.Instance.gameData;
-        int unlockedLevel = Mathf.Min(gameData.highestUnlockedLevel, buttons.Length);
+
+
+        int unlockedLevel = Mathf.Max(1, gameData.highestUnlockedLevel);
+        unlockedLevel = Mathf.Min(unlockedLevel, buttons.Length);
 
         for (int i = 0; i < buttons.Length; i++)
         {
-            buttons[i].interactable = (i + 1) <= unlockedLevel;
+
+            bool isUnlocked = (i + 1) <= unlockedLevel;
+            buttons[i].interactable = isUnlocked;
 
             int levelIndex = i + 1;
+
+            buttons[i].onClick.RemoveAllListeners();
             buttons[i].onClick.AddListener(() => OpenLevel(levelIndex));
         }
 
-        levelUI.UpdateButtons(buttons, unlockedLevel, gameData.levelStars);
+        if (levelUI != null)
+        {
+            levelUI.UpdateButtons(buttons, unlockedLevel, gameData.levelStars);
+        }
     }
 
     public void OpenLevel(int levelId)
