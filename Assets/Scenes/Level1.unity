@@ -5025,9 +5025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12743defe0f454d6b9c3749d4ad163ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraShakeJE
-  shakeDuration: 0.2
-  shakeMagnitude: 0.15
-  dampingSpeed: 1.5
 --- !u!1 &1768226071 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2318412832140130087, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
@@ -5778,6 +5775,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TNT
       objectReference: {fileID: 0}
+    - target: {fileID: 3387793135102191861, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: explosionEffectPrefab
+      value: 
+      objectReference: {fileID: 4222606600419231085, guid: ef43e5aef41c142fb85a7658a397dc75, type: 3}
     - target: {fileID: 3387793135102191861, guid: 30e54e245db33e849a59dc042a236635, type: 3}
       propertyPath: targetEnemy.Array.size
       value: 2

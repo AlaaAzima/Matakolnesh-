@@ -1300,7 +1300,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   arrowTag: Arrow
-  explosionEffectPrefab: {fileID: 0}
+  explosionEffectPrefab: {fileID: 4222606600419231085, guid: ef43e5aef41c142fb85a7658a397dc75, type: 3}
   destroyDelay: 0.2
 --- !u!1 &822771507
 GameObject:
@@ -6592,9 +6592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12743defe0f454d6b9c3749d4ad163ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraShakeJE
-  shakeDuration: 0.2
-  shakeMagnitude: 0.15
-  dampingSpeed: 1.5
 --- !u!1 &1825601361
 GameObject:
   m_ObjectHideFlags: 0
