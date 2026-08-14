@@ -10,7 +10,10 @@ public class Bow : MonoBehaviour
 
     private BowInput bowInput;
     private TrajectoryPredictor trajectoryPredictor;
-
+    void Start()
+    {
+        Time.timeScale = 1f;
+    }
     private void Awake()
     {
         bowInput = GetComponent<BowInput>();
