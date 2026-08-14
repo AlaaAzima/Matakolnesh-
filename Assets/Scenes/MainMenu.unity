@@ -834,15 +834,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
   soundList:
   - {fileID: 8300000, guid: 2568bda1052434eefa24dd6623331e6f, type: 3}
-  - {fileID: 8300000, guid: d95bbac40d4564121b4a9375bea69065, type: 3}
+  - {fileID: 8300000, guid: 95502d0b56b7ef841a8f33f3ef5d24f7, type: 3}
   - {fileID: 8300000, guid: 491055f0ecb634555ad9625eedcf873b, type: 3}
   - {fileID: 8300000, guid: 1698d3962ded5450b9215fde4c023d4e, type: 3}
   - {fileID: 8300000, guid: c68791f08268a4e30ae32f4b95f985c4, type: 3}
-  - {fileID: 8300000, guid: 49ae119f43a1c4338a74c3ffb32b3a8f, type: 3}
+  - {fileID: 8300000, guid: ea76de4228f0beb4387a15544ab43841, type: 3}
   - {fileID: 8300000, guid: 0883c6022668e427ba35c97aac88e663, type: 3}
   - {fileID: 8300000, guid: 20f47084185354c938d9755b82bf93c8, type: 3}
+  - {fileID: 8300000, guid: 418c017a3b6989448bc85cbe49176035, type: 3}
   - {fileID: 8300000, guid: 5177ccf6ae1064761b241ed622d181bc, type: 3}
-  - {fileID: 8300000, guid: 93ea887a0c74f413385a0843fd29b306, type: 3}
   musicList:
   - {fileID: 8300000, guid: 3ecf9df92f9c73445b88c567a0f3df56, type: 3}
   sfxSource: {fileID: 1126577770}
