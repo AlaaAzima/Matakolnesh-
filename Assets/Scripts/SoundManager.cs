@@ -59,27 +59,7 @@ public class SoundManager : MonoBehaviour
         HandlePlaylist();
     }
 
-    void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnDisable()
-    {
-       SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-
-    {
-        Debug.Log("CURRENT SCENE: " + scene.name);
-
-    if (scene.name != "MainMenu" && scene.name != "Loading..." && scene.name != "StageMenu")
-        {
-            StopMusic();
-        
-        }
-    }
+   
 
     /*  PLAYLIST  */
 
