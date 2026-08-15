@@ -4,7 +4,6 @@ using UnityEngine;
 [RequireComponent(typeof(TrajectoryPredictor))]
 public class Bow : MonoBehaviour
 {
-    [SerializeField] private GameObject arrowPrefab;
     [SerializeField] private Transform shotPoint;
     [SerializeField] private float arrowSpeed = 20f;
 
@@ -56,13 +55,11 @@ public class Bow : MonoBehaviour
     {
         trajectoryPredictor.HideTrajectory();
 
-        GameObject arrow = Instantiate(arrowPrefab, shotPoint.position, shotPoint.rotation);
+        Arrow arrow = ArrowPool.Instance.GetArrow(shotPoint.position, shotPoint.rotation);
         SoundManager.PlaySound(SoundType.PlayerShoot);
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
 
         GameManagerJE.Instance.ArrowShot();
         rb.linearVelocity = shotPoint.right * arrowSpeed;
-
-        //Destroy(arrow, 2f);
     }
 }

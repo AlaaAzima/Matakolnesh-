@@ -15,8 +15,10 @@ public class Arrow : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private Color originalColor;
     private int currentBounceCount = 0;
     private bool isStuck = false;
+    private bool isRegisteredWithGameManager = false;
 
     private void Awake()
     {
@@ -28,14 +30,34 @@ public class Arrow : MonoBehaviour
             Debug.LogWarning($"[Arrow] {name} has no SpriteRenderer on this GameObject. " +
                               "The arrow will still be removed after sticking, but it will not visually fade.");
         }
+        else
+        {
+            originalColor = spriteRenderer.color;
+        }
     }
 
-    private void Start()
+    // Called by ArrowPool every time this arrow is handed out for firing.
+    public void OnSpawnFromPool()
     {
-        if (GameManagerJE.Instance != null)
+        isStuck = false;
+        currentBounceCount = 0;
+
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = originalColor;
+        }
+
+        if (GameManagerJE.Instance != null && !isRegisteredWithGameManager)
         {
             GameManagerJE.Instance.RegisterArrow();
+            isRegisteredWithGameManager = true;
         }
+
+        StopAllCoroutines();
         StartCoroutine(IgnorePlayerTemporarily());
     }
 
@@ -58,9 +80,11 @@ public class Arrow : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (GameManagerJE.Instance != null)
+        // Safety net only — normal flow returns arrows to the pool instead of destroying them.
+        if (GameManagerJE.Instance != null && isRegisteredWithGameManager)
         {
             GameManagerJE.Instance.UnregisterArrow();
+            isRegisteredWithGameManager = false;
         }
     }
 
@@ -119,10 +143,10 @@ public class Arrow : MonoBehaviour
         transform.SetParent(collision.transform, worldPositionStays: true);
         transform.position = contact.point;
 
-        StartCoroutine(FadeThenDestroy());
+        StartCoroutine(FadeThenReturn());
     }
 
-    private IEnumerator FadeThenDestroy()
+    private IEnumerator FadeThenReturn()
     {
         yield return new WaitForSeconds(destroyDelayAfterStick);
 
@@ -143,10 +167,28 @@ public class Arrow : MonoBehaviour
         }
         else
         {
-            // No renderer to fade, but keep total lifetime consistent.
             yield return new WaitForSeconds(fadeDuration);
         }
 
-        Destroy(gameObject);
+        ReturnToPool();
+    }
+
+    private void ReturnToPool()
+    {
+        if (GameManagerJE.Instance != null && isRegisteredWithGameManager)
+        {
+            GameManagerJE.Instance.UnregisterArrow();
+            isRegisteredWithGameManager = false;
+        }
+
+        if (ArrowPool.Instance != null)
+        {
+            ArrowPool.Instance.ReturnArrow(this);
+        }
+        else
+        {
+            Debug.LogWarning("[Arrow] ArrowPool.Instance is null — destroying arrow instead of pooling it.");
+            Destroy(gameObject);
+        }
     }
 }
