@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8885417492586587504}
   - component: {fileID: 8468484337004139815}
-  - component: {fileID: 876693868821309090}
   - component: {fileID: 8348684254400071406}
   - component: {fileID: 350434227536775091}
+  - component: {fileID: 2326291573617059058}
+  - component: {fileID: 2758336852152617976}
+  - component: {fileID: 2409213262257828921}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -95,19 +97,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &876693868821309090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3874747495826224118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c276af0c653d29e4cb02930f5fc6937d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyLogicJZ
-  destroyDelay: 1.1
 --- !u!95 &8348684254400071406
 Animator:
   serializedVersion: 7
@@ -167,3 +156,40 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 3.83, y: 5.56}
   m_Direction: 0
+--- !u!114 &2326291573617059058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3874747495826224118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e63ae0f07858a4dbf12a94439f1351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+--- !u!114 &2758336852152617976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3874747495826224118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46cf51c4ac24a364d81afff56ed97a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  destroyDelay: 1.1
+--- !u!114 &2409213262257828921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3874747495826224118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e248e1652124354db884e276e5c9b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyEffects

@@ -3090,6 +3090,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3507077548578339277, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
     - {fileID: 3470448824894878196, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
+    - {fileID: 7869987195090193214, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
+    - {fileID: 7199107251788245488, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
+    - {fileID: 1610667527173203188, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7732339528079374402, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
@@ -5154,7 +5157,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5.5
+  m_Mass: 6
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -5968,12 +5971,16 @@ PrefabInstance:
       value: TNT
       objectReference: {fileID: 0}
     - target: {fileID: 3387793135102191861, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: destroyDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387793135102191861, guid: 30e54e245db33e849a59dc042a236635, type: 3}
       propertyPath: explosionEffectPrefab
       value: 
       objectReference: {fileID: 4222606600419231085, guid: ef43e5aef41c142fb85a7658a397dc75, type: 3}
     - target: {fileID: 3387793135102191861, guid: 30e54e245db33e849a59dc042a236635, type: 3}
       propertyPath: targetEnemy.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3387793135102191861, guid: 30e54e245db33e849a59dc042a236635, type: 3}
       propertyPath: 'targetEnemy.Array.data[0]'
@@ -5983,6 +5990,10 @@ PrefabInstance:
       propertyPath: 'targetEnemy.Array.data[1]'
       value: 
       objectReference: {fileID: 907446252}
+    - target: {fileID: 3387793135102191861, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: 'targetEnemy.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1768226071}
     - target: {fileID: 3635291437028333828, guid: 30e54e245db33e849a59dc042a236635, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.24783002
