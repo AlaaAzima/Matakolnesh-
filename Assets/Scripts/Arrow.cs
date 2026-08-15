@@ -11,14 +11,23 @@ public class Arrow : MonoBehaviour
 
     [Header("Despawn Settings")]
     [SerializeField] private float destroyDelayAfterStick = 2f;
+    [SerializeField] private float fadeDuration = 0.5f;
 
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
     private int currentBounceCount = 0;
     private bool isStuck = false;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (spriteRenderer == null)
+        {
+            Debug.LogWarning($"[Arrow] {name} has no SpriteRenderer on this GameObject. " +
+                              "The arrow will still be removed after sticking, but it will not visually fade.");
+        }
     }
 
     private void Start()
@@ -110,6 +119,34 @@ public class Arrow : MonoBehaviour
         transform.SetParent(collision.transform, worldPositionStays: true);
         transform.position = contact.point;
 
-        Destroy(gameObject, destroyDelayAfterStick);
+        StartCoroutine(FadeThenDestroy());
+    }
+
+    private IEnumerator FadeThenDestroy()
+    {
+        yield return new WaitForSeconds(destroyDelayAfterStick);
+
+        if (spriteRenderer != null)
+        {
+            Color startColor = spriteRenderer.color;
+            float elapsed = 0f;
+
+            while (elapsed < fadeDuration)
+            {
+                elapsed += Time.deltaTime;
+                float alpha = Mathf.Lerp(startColor.a, 0f, elapsed / fadeDuration);
+                spriteRenderer.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+                yield return null;
+            }
+
+            spriteRenderer.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
+        }
+        else
+        {
+            // No renderer to fade, but keep total lifetime consistent.
+            yield return new WaitForSeconds(fadeDuration);
+        }
+
+        Destroy(gameObject);
     }
 }
