@@ -43,7 +43,7 @@ public class GameManagerJE : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
             Debug.Log("Instance Assigned");
             ChangeState(new PlayingState());
             SceneManager.sceneLoaded += OnSceneLoaded;
@@ -115,6 +115,7 @@ public class GameManagerJE : MonoBehaviour
     {
         if (CurrentState is GameOverState) return;
 
+        Debug.Log("GameManagerJE: GameWin() called!");
         ChangeState(new GameOverState());
 
         int stars = starRatingSystem.CalculateStars();
@@ -126,14 +127,19 @@ public class GameManagerJE : MonoBehaviour
 
         if (WLGamePanelJZ != null)
         {
+            Debug.Log("GameManagerJE: Showing Win Panel...");
             WLGamePanelJZ.ShowWin(stars);
+        }
+        else
+        {
+            Debug.LogError("GameManagerJE: WLGamePanelJZ is NULL! The panel cannot be shown.");
         }
     }
     public void PlayerDied()
     {
         if (CurrentState is GameOverState)
             return;
-        
+
         ChangeState(new GameOverState());
         if (winCondition.CheckLose())
         {
@@ -156,8 +162,8 @@ public class GameManagerJE : MonoBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        WLGamePanelJZ = FindFirstObjectByType<WLGamePanelJZ>();
-        starRatingSystem = FindFirstObjectByType<StarRatingJE>();
+        WLGamePanelJZ = FindFirstObjectByType<WLGamePanelJZ>(FindObjectsInactive.Include);
+        starRatingSystem = FindFirstObjectByType<StarRatingJE>(FindObjectsInactive.Include);
 
         InitializeLevel();
     }

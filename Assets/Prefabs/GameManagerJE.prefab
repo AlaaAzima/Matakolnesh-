@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6623612121671085667}
   - component: {fileID: 3263634143072604295}
   - component: {fileID: 3144246701616785046}
+  - component: {fileID: 2687585440401068645}
+  - component: {fileID: 285806887859452390}
   m_Layer: 0
   m_Name: GameManagerJE
   m_TagString: Untagged
@@ -49,7 +51,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManagerJE
   remainingEnemies: 1
-  isGameOver: 0
   currentLevel: 1
   winCondition: {fileID: 700253650561642536}
   starRatingSystem: {fileID: 3144246701616785046}
@@ -71,6 +72,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d644c363ba9a46a78d65832d9baa92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinAndLoseJE
+  winConditions:
+  - {fileID: 2687585440401068645}
+  - {fileID: 285806887859452390}
 --- !u!114 &6623612121671085667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +114,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StarRatingJE
   uiHandler: {fileID: 0}
   arrowsUsed: 0
+  stars3: 10
+  stars2: 6
+--- !u!114 &2687585440401068645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423636252829655458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e1948000c9a1d40994d13cf8e1ec0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoActiveArrowsCondition
+--- !u!114 &285806887859452390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423636252829655458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b2f5f2ca47bcf41b392c2a45d230b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemiesDeadCondition
