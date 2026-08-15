@@ -3198,6 +3198,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManagerJE
       objectReference: {fileID: 0}
+    - target: {fileID: 7155154009740691516, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: winConditions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155154009740691516, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: 'winConditions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1421384031}
+    - target: {fileID: 7155154009740691516, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      propertyPath: 'winConditions.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1421384030}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3207,7 +3219,10 @@ PrefabInstance:
       addedObject: {fileID: 1421384029}
     - targetCorrespondingSourceObject: {fileID: 4138103874847798245, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1421384038}
+      addedObject: {fileID: 1421384031}
+    - targetCorrespondingSourceObject: {fileID: 4138103874847798245, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1421384030}
   m_SourcePrefab: {fileID: 100100000, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
 --- !u!1 &764659091
 GameObject:
@@ -6496,7 +6511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551f85c00cd5a489b93a1fc9a1be70a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetSaveJE
---- !u!114 &1421384038
+--- !u!114 &1421384030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6505,14 +6520,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1421384022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cbef30244ffe7249bb0b8e446816a61, type: 3}
+  m_Script: {fileID: 11500000, guid: d3b2f5f2ca47bcf41b392c2a45d230b5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MusicPlayer
-  musicList: []
-  musicSource: {fileID: 0}
-  currentMusicIndex: 0
-  playlistActive: 0
-  musicStopped: 0
+  m_EditorClassIdentifier: Assembly-CSharp::EnemiesDeadCondition
+--- !u!114 &1421384031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421384022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e1948000c9a1d40994d13cf8e1ec0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoActiveArrowsCondition
 --- !u!1 &1461847375
 GameObject:
   m_ObjectHideFlags: 0

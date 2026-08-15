@@ -28,10 +28,7 @@ public class EnemyController : MonoBehaviour
 
     private void HandleDeath()
     {
-        if (GameManagerJE.Instance != null)
-        {
-            GameManagerJE.Instance.EnemyKilled();
-        }
+        GameEvents.TriggerEnemyKilled();
 
         if (enemyCollider != null) enemyCollider.enabled = false;
         

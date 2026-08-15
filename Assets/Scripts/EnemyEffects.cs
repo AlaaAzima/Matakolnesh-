@@ -30,6 +30,6 @@ public class EnemyEffects : MonoBehaviour
             animator.SetTrigger(DieTriggerHash);
         }
         
-        SoundManager.PlaySound(SoundType.EnemyDeath);
+        GameEvents.TriggerPlaySound(SoundType.EnemyDeath);
     }
 }

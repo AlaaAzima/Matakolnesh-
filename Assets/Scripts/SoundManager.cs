@@ -59,7 +59,20 @@ public class SoundManager : MonoBehaviour
         HandlePlaylist();
     }
 
-   
+    private void OnEnable()
+    {
+        GameEvents.OnPlaySound += HandlePlaySound;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnPlaySound -= HandlePlaySound;
+    }
+
+    private void HandlePlaySound(SoundType type)
+    {
+        PlaySound(type);
+    }
 
     /*  PLAYLIST  */
 
