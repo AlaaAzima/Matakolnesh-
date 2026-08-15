@@ -143,7 +143,7 @@ MonoBehaviour:
   affectedLayers:
     serializedVersion: 2
     m_Bits: 512
-  explosionEffect: {fileID: 0}
+  explosionEffect: {fileID: 4222606600419231085, guid: ef43e5aef41c142fb85a7658a397dc75, type: 3}
   button: {fileID: 1332123122}
 --- !u!1001 &88364265
 PrefabInstance:
@@ -287,7 +287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8468484337004139815, guid: 3b49e0adfcf325c40938c11c0ddcf24f, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8885417492586587504, guid: 3b49e0adfcf325c40938c11c0ddcf24f, type: 3}
       propertyPath: m_LocalScale.x
@@ -753,7 +753,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 56661139923587184, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2318412832140130087, guid: a98b9a56eefdd5246b1bdb2f7175e202, type: 3}
       propertyPath: m_Name
@@ -996,7 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8468484337004139815, guid: 3b49e0adfcf325c40938c11c0ddcf24f, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8885417492586587504, guid: 3b49e0adfcf325c40938c11c0ddcf24f, type: 3}
       propertyPath: m_LocalScale.x
@@ -1198,7 +1198,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4052232232991397121, guid: f48f90b8abb01a94ba424eef652de09d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
