@@ -145,7 +145,7 @@ public class GameManagerJE : MonoBehaviour
     public void InitializeLevel()
     {
         ChangeState(new PlayingState());
-        remainingEnemies = FindObjectsOfType<EnemyLogicJZ>().Length;
+        remainingEnemies = FindObjectsOfType<EnemyHealth>().Length;
         starRatingSystem.ResetCounter();
         Debug.Log("Level Initialized");
     }
