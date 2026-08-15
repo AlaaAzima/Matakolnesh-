@@ -11,15 +11,15 @@ public class DisappearWall : MonoBehaviour
     }
     private void OnEnable()
     {
-        button.OnButtonClick += Appear;
+        button.OnButtonClick += Disappear;
     }
 
     private void OnDisable()
     {
-        button.OnButtonClick -= Appear;
+        button.OnButtonClick -= Disappear;
     }
 
-    public void Appear()
+    public void Disappear()
     {
         for (int i = 0; i < wall.Length; i++)
         {
