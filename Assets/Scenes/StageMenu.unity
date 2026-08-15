@@ -3205,6 +3205,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4138103874847798245, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1421384029}
+    - targetCorrespondingSourceObject: {fileID: 4138103874847798245, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1421384038}
   m_SourcePrefab: {fileID: 100100000, guid: 38ac400d35f7c40de89cd34bfb6c1dd5, type: 3}
 --- !u!1 &764659091
 GameObject:
@@ -6493,6 +6496,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551f85c00cd5a489b93a1fc9a1be70a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetSaveJE
+--- !u!114 &1421384038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421384022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cbef30244ffe7249bb0b8e446816a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicPlayer
+  musicList: []
+  musicSource: {fileID: 0}
+  currentMusicIndex: 0
+  playlistActive: 0
+  musicStopped: 0
 --- !u!1 &1461847375
 GameObject:
   m_ObjectHideFlags: 0
@@ -9311,7 +9331,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StageMenuUIJE
   levelButtons: {fileID: 1359088225}
   levelUI: {fileID: 1952649613}
-  buttons: []
+  buttons:
+  - {fileID: 1262059434}
 --- !u!4 &1952649615
 Transform:
   m_ObjectHideFlags: 0
