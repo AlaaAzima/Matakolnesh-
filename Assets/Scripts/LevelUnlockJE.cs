@@ -2,40 +2,46 @@ using UnityEngine;
 
 public class LevelUnlockJE : MonoBehaviour
 {
-    [SerializeField] private int BossRequiredStars = 38;
+    [Header("Every-5-Levels Gate")]
+    [SerializeField] private int gateInterval = 5;      
+    [SerializeField] private int minStarsPerLevel = 2;  
+    [SerializeField] private int requiredLevelsMeetingMin = 3; 
+
     public void UnlockNextLevel(int currentLevel)
     {
-        //GameManagerJE.Instance.isGameOver = false;
-        if (currentLevel == 19)
-        {
-            if (CanUnlockBoss())
-            {
-                Debug.Log("Boss Level Unlocked");
-            }
-            else
-            {
-                Debug.Log("Collect at least 40 stars to unlock the Boss.");
-            }
+        
 
-            return;
+        int nextLevel = currentLevel + 1;
+
+        
+        if (nextLevel % gateInterval == 0)
+        {
+            if (!CanUnlockGatedLevel(currentLevel))
+            {
+                Debug.Log($"Level {nextLevel} locked. Get at least {minStarsPerLevel} stars on {requiredLevelsMeetingMin} previous levels to unlock it.");
+                return;
+            }
         }
 
         GameManagerJE.Instance.gameData.highestUnlockedLevel =
-        Mathf.Max(GameManagerJE.Instance.gameData.highestUnlockedLevel, currentLevel + 1);
-        Debug.Log("Level " + (currentLevel + 1) + " Unlocked");
+            Mathf.Max(GameManagerJE.Instance.gameData.highestUnlockedLevel, nextLevel);
+        Debug.Log("Level " + nextLevel + " Unlocked");
     }
 
-
-    public bool CanUnlockBoss()
+    
+    public bool CanUnlockGatedLevel(int currentLevel)
     {
-        int totalStars = 0;
+        int[] levelStars = GameManagerJE.Instance.gameData.levelStars;
+        int levelsMeetingMin = 0;
 
-        for (int i = 0; i < 19; i++) 
+        for (int i = 0; i < currentLevel; i++)
         {
-            totalStars += GameManagerJE.Instance.gameData.levelStars[i];
+            if (i >= levelStars.Length) break;
+
+            if (levelStars[i] >= minStarsPerLevel)
+                levelsMeetingMin++;
         }
 
-        return totalStars >= BossRequiredStars;
+        return levelsMeetingMin >= requiredLevelsMeetingMin;
     }
-
 }
