@@ -7,7 +7,7 @@ public class GameManagerJE : MonoBehaviour
     public static GameManagerJE Instance { get; private set; }
     [Header("Game State")]
     public int remainingEnemies;
-    public bool isGameOver = false;
+    public IGameState CurrentState { get; private set; }
     public int currentLevel;
     [Header("Systems")]
     [SerializeField] private WinAndLoseJE winCondition;
@@ -45,6 +45,7 @@ public class GameManagerJE : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             Debug.Log("Instance Assigned");
+            ChangeState(new PlayingState());
             SceneManager.sceneLoaded += OnSceneLoaded;
 
             // Load game data when the GameManager is initialized
@@ -99,11 +100,22 @@ public class GameManagerJE : MonoBehaviour
         }
     }
 
+    public void ChangeState(IGameState newState)
+    {
+        if (CurrentState != null)
+        {
+            CurrentState.ExitState();
+        }
+
+        CurrentState = newState;
+        CurrentState.EnterState();
+    }
+
     public void GameWin()
     {
-        if (isGameOver) return;
+        if (CurrentState is GameOverState) return;
 
-        isGameOver = true;
+        ChangeState(new GameOverState());
 
         int stars = starRatingSystem.CalculateStars();
 
@@ -119,9 +131,10 @@ public class GameManagerJE : MonoBehaviour
     }
     public void PlayerDied()
     {
-        if (isGameOver)
+        if (CurrentState is GameOverState)
             return;
-        isGameOver = true;
+        
+        ChangeState(new GameOverState());
         if (winCondition.CheckLose())
         {
             saveSystem.Save(gameData);
@@ -131,7 +144,7 @@ public class GameManagerJE : MonoBehaviour
     }
     public void InitializeLevel()
     {
-        isGameOver = false;
+        ChangeState(new PlayingState());
         remainingEnemies = FindObjectsOfType<EnemyLogicJZ>().Length;
         starRatingSystem.ResetCounter();
         Debug.Log("Level Initialized");

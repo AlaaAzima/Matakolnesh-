@@ -11,9 +11,9 @@ public class GameTestJE : MonoBehaviour
     [ContextMenu("Test Win")]
     public void TestWin()
     {
-    gameManager.remainingEnemies = 1;
-    gameManager.EnemyKilled();
-   
+        gameManager.remainingEnemies = 1;
+        gameManager.EnemyKilled();
+
     }
 
     [ContextMenu("Shoot 5 Arrows")]
@@ -36,12 +36,12 @@ public class GameTestJE : MonoBehaviour
         Debug.Log("Stars: " + starRating.CalculateStars());
     }
 
-    
+
 
     [ContextMenu("Test Lose")]
     public void TestLose()
     {
-        gameManager.isGameOver = false;
+        gameManager.ChangeState(new GameOverState());
         gameManager.PlayerDied();
     }
 
@@ -51,8 +51,8 @@ public class GameTestJE : MonoBehaviour
         levelUnlock.UnlockNextLevel(gameManager.currentLevel);
     }
 
-   
-   [ContextMenu("Test Save & Load")]
+
+    [ContextMenu("Test Save & Load")]
     public void TestSaveLoad()
     {
         gameManager.gameData.highestUnlockedLevel = 5;
@@ -66,15 +66,15 @@ public class GameTestJE : MonoBehaviour
 
 
 
-[ContextMenu("Give Max Stars")]
-public void GiveMaxStars()
-{
-    for (int i = 0; i < 19; i++)
+    [ContextMenu("Give Max Stars")]
+    public void GiveMaxStars()
     {
-        gameManager.gameData.levelStars[i] = 2;
-    }
+        for (int i = 0; i < 19; i++)
+        {
+            gameManager.gameData.levelStars[i] = 2;
+        }
 
-    levelUnlock.UnlockNextLevel(19);
-}
+        levelUnlock.UnlockNextLevel(19);
+    }
 
 }

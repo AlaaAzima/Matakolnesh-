@@ -9,7 +9,7 @@ public class BowInput : MonoBehaviour
 
     void Update()
     {
-        if (GameManagerJE.Instance.isGameOver || PauseSystemJZ.Instance.IsPaused) return;
+        if (GameManagerJE.Instance == null || GameManagerJE.Instance.CurrentState == null || !GameManagerJE.Instance.CurrentState.CanShoot) return;
 
         if (Input.GetButtonDown("Fire1"))
         {
