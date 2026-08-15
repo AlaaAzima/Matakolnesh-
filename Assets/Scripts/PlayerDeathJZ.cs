@@ -35,10 +35,7 @@ public class PlayerDeathJZ : MonoBehaviour, IDeath
         if (isDead) return;
         isDead = true;
 
-        if (GameManagerJE.Instance != null)
-        {
-            GameManagerJE.Instance.PlayerDied();
-        }
+        GameEvents.TriggerPlayerDied();
 
 
         if (archerAim != null)

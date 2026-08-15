@@ -45,6 +45,17 @@ public class GameManagerJE : MonoBehaviour
             Instance = this;
             //DontDestroyOnLoad(gameObject);
             Debug.Log("Instance Assigned");
+
+            // Automatically set currentLevel based on the Scene's name (e.g. "Level4" -> 4)
+            string sceneName = SceneManager.GetActiveScene().name;
+            if (sceneName.StartsWith("Level"))
+            {
+                if (int.TryParse(sceneName.Substring(5), out int levelIndex))
+                {
+                    currentLevel = levelIndex;
+                }
+            }
+
             ChangeState(new PlayingState());
             SceneManager.sceneLoaded += OnSceneLoaded;
 
@@ -55,6 +66,22 @@ public class GameManagerJE : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnEnable()
+    {
+        GameEvents.OnArrowSpawned += RegisterArrow;
+        GameEvents.OnArrowDestroyed += UnregisterArrow;
+        GameEvents.OnEnemyKilled += EnemyKilled;
+        GameEvents.OnPlayerDied += PlayerDied;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnArrowSpawned -= RegisterArrow;
+        GameEvents.OnArrowDestroyed -= UnregisterArrow;
+        GameEvents.OnEnemyKilled -= EnemyKilled;
+        GameEvents.OnPlayerDied -= PlayerDied;
     }
 
     public void LoadGameData()
@@ -159,6 +186,7 @@ public class GameManagerJE : MonoBehaviour
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded; // unsubscribe
+        GameEvents.Clear();
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {

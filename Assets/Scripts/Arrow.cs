@@ -51,9 +51,9 @@ public class Arrow : MonoBehaviour
             spriteRenderer.color = originalColor;
         }
 
-        if (GameManagerJE.Instance != null && !isRegisteredWithGameManager)
+        if (!isRegisteredWithGameManager)
         {
-            GameManagerJE.Instance.RegisterArrow();
+            GameEvents.TriggerArrowSpawned();
             isRegisteredWithGameManager = true;
         }
 
@@ -81,9 +81,9 @@ public class Arrow : MonoBehaviour
     private void OnDestroy()
     {
         // Safety net only — normal flow returns arrows to the pool instead of destroying them.
-        if (GameManagerJE.Instance != null && isRegisteredWithGameManager)
+        if (isRegisteredWithGameManager)
         {
-            GameManagerJE.Instance.UnregisterArrow();
+            GameEvents.TriggerArrowDestroyed();
             isRegisteredWithGameManager = false;
         }
     }
@@ -104,7 +104,7 @@ public class Arrow : MonoBehaviour
         if (((1 << collision.gameObject.layer) & wallLayer) != 0)
         {
             currentBounceCount++;
-            SoundManager.PlaySound(SoundType.SpoonCollison);
+            GameEvents.TriggerPlaySound(SoundType.SpoonCollison);
 
             if (currentBounceCount >= maxBounces)
             {
@@ -175,9 +175,9 @@ public class Arrow : MonoBehaviour
 
     private void ReturnToPool()
     {
-        if (GameManagerJE.Instance != null && isRegisteredWithGameManager)
+        if (isRegisteredWithGameManager)
         {
-            GameManagerJE.Instance.UnregisterArrow();
+            GameEvents.TriggerArrowDestroyed();
             isRegisteredWithGameManager = false;
         }
 

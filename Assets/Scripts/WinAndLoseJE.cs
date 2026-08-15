@@ -21,7 +21,8 @@ public class WinAndLoseJE : MonoBehaviour
         {
             if (!condition.IsConditionMet())
             {
-                return false;
+                Debug.Log($"WinAndLoseJE: Condition '{condition.GetType().Name}' is NOT met yet!");
+                return false; 
             }
         }
 
