@@ -843,6 +843,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 20f47084185354c938d9755b82bf93c8, type: 3}
   - {fileID: 8300000, guid: 418c017a3b6989448bc85cbe49176035, type: 3}
   - {fileID: 8300000, guid: 5177ccf6ae1064761b241ed622d181bc, type: 3}
+  - {fileID: 8300000, guid: 695ca3414eed24e8b85e76ff44d3cc1b, type: 3}
   musicList:
   - {fileID: 8300000, guid: 3ecf9df92f9c73445b88c567a0f3df56, type: 3}
   sfxSource: {fileID: 1126577770}
