@@ -228,6 +228,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6530584883722834210, guid: cf93f56ebce53e2478ebe58b9f3818b6, type: 3}
+      propertyPath: numberOfPoints
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6530584883722834210, guid: cf93f56ebce53e2478ebe58b9f3818b6, type: 3}
+      propertyPath: spaceBetweenPoints
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 7982906684162473660, guid: cf93f56ebce53e2478ebe58b9f3818b6, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.5

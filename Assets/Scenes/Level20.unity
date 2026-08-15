@@ -555,14 +555,6 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 861103116828744049, guid: be36fe5d006b21842881909b23d18d44, type: 3}
-      propertyPath: numberOfPoints
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 861103116828744049, guid: be36fe5d006b21842881909b23d18d44, type: 3}
-      propertyPath: spaceBetweenPoints
-      value: 0.03
-      objectReference: {fileID: 0}
     - target: {fileID: 6402508062891147262, guid: be36fe5d006b21842881909b23d18d44, type: 3}
       propertyPath: m_IsActive
       value: 1
