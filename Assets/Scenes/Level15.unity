@@ -576,7 +576,7 @@ MonoBehaviour:
   targetWalls:
   - {fileID: 880601004}
   arrowTag: Arrow
-  explosionEffectPrefab: {fileID: 0}
+  explosionEffectPrefab: {fileID: 4222606600419231085, guid: ef43e5aef41c142fb85a7658a397dc75, type: 3}
   destroyDelay: 0.2
 --- !u!212 &535804583
 SpriteRenderer:
@@ -6229,7 +6229,7 @@ MonoBehaviour:
   targetWalls:
   - {fileID: 966512605}
   arrowTag: Arrow
-  explosionEffectPrefab: {fileID: 0}
+  explosionEffectPrefab: {fileID: 4222606600419231085, guid: ef43e5aef41c142fb85a7658a397dc75, type: 3}
   destroyDelay: 0.2
 --- !u!1 &880601004
 GameObject:

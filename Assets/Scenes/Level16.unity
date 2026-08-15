@@ -590,6 +590,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3387793135102191861, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: destroyDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387793135102191861, guid: 30e54e245db33e849a59dc042a236635, type: 3}
+      propertyPath: explosionEffectPrefab
+      value: 
+      objectReference: {fileID: 4222606600419231085, guid: ef43e5aef41c142fb85a7658a397dc75, type: 3}
     - target: {fileID: 3635291437028333828, guid: 30e54e245db33e849a59dc042a236635, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.24783002
@@ -674,7 +682,8 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 47914125946255306, guid: 0a86d832a2e5345e7ab0563cc80f55d2, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3387793135102191861, guid: 30e54e245db33e849a59dc042a236635, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -892,7 +901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3144246701616785046, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: stars3
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7066198657308481642, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35520,7 +35529,7 @@ MonoBehaviour:
   affectedLayers:
     serializedVersion: 2
     m_Bits: 512
-  explosionEffect: {fileID: 0}
+  explosionEffect: {fileID: 4222606600419231085, guid: ef43e5aef41c142fb85a7658a397dc75, type: 3}
   button: {fileID: 1295459015}
 --- !u!1 &2098209709
 GameObject:

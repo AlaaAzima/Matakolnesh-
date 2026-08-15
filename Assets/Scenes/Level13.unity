@@ -1017,7 +1017,7 @@ MonoBehaviour:
   - {fileID: 1859781408}
   - {fileID: 1020919355}
   arrowTag: Arrow
-  explosionEffectPrefab: {fileID: 0}
+  explosionEffectPrefab: {fileID: 4222606600419231085, guid: ef43e5aef41c142fb85a7658a397dc75, type: 3}
   destroyDelay: 0.1
 --- !u!1 &907446252 stripped
 GameObject:
