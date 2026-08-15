@@ -5,7 +5,8 @@ public class StarRatingJE : MonoBehaviour
     [SerializeField] private UIHandlerJE uiHandler;
     public int arrowsUsed;
     public static event Action<int> OnArrowCountChanged;
-
+    [SerializeField] int stars3 = 10;
+    [SerializeField] int stars2 = 6;
     void Start()
     {
         uiHandler = FindFirstObjectByType<UIHandlerJE>();
@@ -19,10 +20,10 @@ public class StarRatingJE : MonoBehaviour
 
     public int CalculateStars()
     {
-        if (arrowsUsed <= 4)
+        if (arrowsUsed <= stars3)
             return 3;
 
-        if (arrowsUsed <= 8)
+        if (arrowsUsed <= stars2)
             return 2;
 
         return 1;
