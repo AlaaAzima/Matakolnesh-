@@ -2,23 +2,36 @@ using UnityEngine;
 
 public class WinAndLoseJE : MonoBehaviour
 {
+    [Header("Conditions")]
+    [Tooltip("Drag and drop LevelCondition scripts here (e.g. KillAllEnemiesCondition). ALL conditions must be met to win.")]
+    [SerializeField] private LevelCondition[] winConditions;
+
     public bool CheckWin()
     {
-        if (GameManagerJE.Instance.remainingEnemies <= 0 &&
-            !(GameManagerJE.Instance.CurrentState is GameOverState) &&
-            GameManagerJE.Instance.activeArrowCount <= 0)
+        if (GameManagerJE.Instance != null && GameManagerJE.Instance.CurrentState is GameOverState)
+            return false;
+
+        if (winConditions == null || winConditions.Length == 0)
         {
-            Debug.Log("YOU WIN!");
-            return true;
+            Debug.LogWarning("WinAndLoseJE: No Win Conditions assigned in the inspector!");
+            return false;
         }
 
-        return false;
+        foreach (var condition in winConditions)
+        {
+            if (!condition.IsConditionMet())
+            {
+                return false;
+            }
+        }
+
+        Debug.Log("WinAndLoseJE: YOU WIN! All conditions met.");
+        return true;
     }
 
     public bool CheckLose()
-
     {
-        if (GameManagerJE.Instance.CurrentState is GameOverState)
+        if (GameManagerJE.Instance != null && GameManagerJE.Instance.CurrentState is GameOverState)
         {
             Debug.Log("YOU LOSE!");
             return true;
