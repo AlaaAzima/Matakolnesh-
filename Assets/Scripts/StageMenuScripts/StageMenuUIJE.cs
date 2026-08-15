@@ -10,6 +10,7 @@ public class StageMenuUIJE : MonoBehaviour
     [SerializeField] private Button[] buttons;
     private void Start()
     {
+        Time.timeScale = 1f;
 
         if (GameManagerJE.Instance != null)
         {

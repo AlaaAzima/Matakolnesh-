@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 155226833}
   - component: {fileID: 155226832}
   - component: {fileID: 155226835}
+  - component: {fileID: 155226836}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -253,6 +254,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705a10e4822e74ef6842f64182c4ecef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+--- !u!114 &155226836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155226830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45280bd98334743b691837eb3a99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimaJE
+  hoverScale: 1.1
+  clickScale: 0.9
+  duration: 0.15
+  ignoreTimeScale: 1
 --- !u!1 &467243449
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,10 +861,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 418c017a3b6989448bc85cbe49176035, type: 3}
   - {fileID: 8300000, guid: 5177ccf6ae1064761b241ed622d181bc, type: 3}
   - {fileID: 8300000, guid: 695ca3414eed24e8b85e76ff44d3cc1b, type: 3}
-  musicList:
-  - {fileID: 8300000, guid: 3ecf9df92f9c73445b88c567a0f3df56, type: 3}
+  musicList: []
   sfxSource: {fileID: 1126577770}
-  musicSource: {fileID: 1126577767}
+  musicSource: {fileID: 0}
 --- !u!82 &1126577770
 AudioSource:
   m_ObjectHideFlags: 0
@@ -958,6 +974,7 @@ GameObject:
   - component: {fileID: 1184385580}
   - component: {fileID: 1184385579}
   - component: {fileID: 1184385582}
+  - component: {fileID: 1184385583}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -1079,6 +1096,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705a10e4822e74ef6842f64182c4ecef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+--- !u!114 &1184385583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184385577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45280bd98334743b691837eb3a99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimaJE
+  hoverScale: 1.1
+  clickScale: 0.9
+  duration: 0.15
+  ignoreTimeScale: 1
 --- !u!1 &1482614731
 GameObject:
   m_ObjectHideFlags: 0

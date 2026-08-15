@@ -5,13 +5,16 @@ using UnityEngine.UI;
 public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
 {   
 
-    [SerializeField] int maxPage;
+    [SerializeField] int maxPage = 4;
     int currentPage;
+    Vector3 startPos;
     Vector3 targetPos;
+    bool isStartPosSaved = false;
+
     [SerializeField] Vector3 pageStep;
     [SerializeField] RectTransform levelPagesRect;
 
-    [SerializeField] float tweenTime;
+    [SerializeField] float tweenTime = 0.3f;
     [SerializeField] LeanTweenType tweenType;
 
     float dragThreshold ;
@@ -19,11 +22,17 @@ public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
     [SerializeField] Sprite barClosed, barOpen;
     [SerializeField] private Button PreviousBtn, NextBtn;
 
+    private LTDescr tween;
+
     private void Awake()
     {
-
         currentPage = 1;
-        targetPos = levelPagesRect.localPosition;
+        if (levelPagesRect != null)
+        {
+            startPos = levelPagesRect.localPosition;
+            isStartPosSaved = true;
+        }
+        targetPos = startPos;
         dragThreshold = Screen.width /15f ;
         UpdateBar();
         UpdateArrowBtn();
@@ -34,9 +43,8 @@ public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
         if (currentPage < maxPage)
         {
             currentPage++;
-            targetPos += pageStep;
-            MovePage();
         }
+        MovePage();
     }
 
     public void PreviousPage()
@@ -44,15 +52,37 @@ public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
         if (currentPage > 1)
         {
             currentPage--;
-            targetPos -= pageStep;
-            MovePage();
-           
         }
+        MovePage();
+    }
+
+    public void SetPage(int page)
+    {
+        currentPage = Mathf.Clamp(page, 1, maxPage);
+        MovePage();
     }
 
     void MovePage()
     {
-        levelPagesRect.LeanMoveLocal(targetPos, tweenTime).setEase(tweenType);
+        if (!isStartPosSaved && levelPagesRect != null)
+        {
+            startPos = levelPagesRect.localPosition;
+            isStartPosSaved = true;
+        }
+
+        targetPos = startPos + (currentPage - 1) * pageStep;
+
+        if (levelPagesRect != null)
+        {
+            if (tween != null)
+            {
+                tween.reset();
+                LeanTween.cancel(levelPagesRect.gameObject);
+                tween = null;
+            }
+            tween = levelPagesRect.LeanMoveLocal(targetPos, tweenTime).setEase(tweenType).setIgnoreTimeScale(true);
+        }
+
         UpdateBar();
         UpdateArrowBtn();
     }
@@ -70,23 +100,33 @@ public class SwipeConrolllerJE : MonoBehaviour , IEndDragHandler
         }
     }
 
+    private void OnDisable()
+    {
+        if (tween != null)
+        {
+            tween.reset();
+            tween = null;
+        }
+    }
+
     
     void UpdateBar()
     {
-        foreach(var item in barImage)
+        if (barImage == null) return;
+        for (int i = 0; i < barImage.Length; i++)
         {
-            item.sprite = barClosed;
-            
+            if (barImage[i] != null)
+            {
+                barImage[i].sprite = (i == currentPage - 1) ? barOpen : barClosed;
+            }
         }
-        barImage[currentPage - 1].sprite = barOpen;
     }
 
     void UpdateArrowBtn()
     {
-        PreviousBtn.interactable = true;
-        NextBtn.interactable = true;
-
-        if (currentPage == 1) PreviousBtn.interactable = false;
-        else if (currentPage == maxPage) NextBtn.interactable = false;
+        if (PreviousBtn != null) PreviousBtn.interactable = (currentPage > 1);
+        if (NextBtn != null) NextBtn.interactable = (currentPage < maxPage);
     }
 }
+
+

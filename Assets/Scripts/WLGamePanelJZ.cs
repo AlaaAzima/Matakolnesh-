@@ -50,11 +50,13 @@ public class WLGamePanelJZ : MonoBehaviour
 
     public void StageMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("StageMenu");
     }
 
     public void MainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
