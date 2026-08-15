@@ -1,3 +1,18 @@
+/*
+// =================================================================================
+// DEPRECATED SCRIPT
+// =================================================================================
+// This script violated the Single Responsibility Principle (SRP) by handling health,
+// physics, visuals, audio, and GameManager communication all at once.
+//
+// It has now been split into 3 separate scripts:
+// 1. EnemyHealth.cs
+// 2. EnemyEffects.cs
+// 3. EnemyController.cs
+//
+// Please remove this script from your Enemy Prefab and attach the 3 new scripts instead.
+// =================================================================================
+
 using UnityEngine;
 
 public class EnemyLogicJZ : MonoBehaviour, IDeath
@@ -9,8 +24,6 @@ public class EnemyLogicJZ : MonoBehaviour, IDeath
     private Rigidbody2D rb;
     private bool isDead = false;
 
-    
-
     private static readonly int DieTriggerHash = Animator.StringToHash("Death");
    
     private void Awake()
@@ -20,24 +33,20 @@ public class EnemyLogicJZ : MonoBehaviour, IDeath
         rb = GetComponent<Rigidbody2D>();
     }
    
-
     public void Die()
     {
         if (isDead) return;
         isDead = true;
-
 
         if (GameManagerJE.Instance != null)
         {
             GameManagerJE.Instance.EnemyKilled();
         }
 
-
         if (animator != null)
         {
             animator.SetTrigger(DieTriggerHash);
         }
-
 
         if (enemyCollider != null) enemyCollider.enabled = false;
         if (rb != null)
@@ -46,12 +55,9 @@ public class EnemyLogicJZ : MonoBehaviour, IDeath
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
 
-
         SoundManager.PlaySound(SoundType.EnemyDeath);
         Destroy(gameObject, destroyDelay);
     }
-
-   
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -61,3 +67,4 @@ public class EnemyLogicJZ : MonoBehaviour, IDeath
         }
     }
 }
+*/
