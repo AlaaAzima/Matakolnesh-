@@ -581,6 +581,7 @@ GameObject:
   - component: {fileID: 2058564572111910634}
   - component: {fileID: 7635452588075949121}
   - component: {fileID: 4391037457714524255}
+  - component: {fileID: 402731931109476599}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -687,6 +688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WLGamePanelJZ
   winPanel: {fileID: 6235935256817145464}
+  winPanelAnimation: {fileID: 402731931109476599}
   starUI: {fileID: 7972716169594203110}
   winDelay: 1.1
 --- !u!114 &4391037457714524255
@@ -702,6 +704,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIHandlerJE
   arrowCounter: {fileID: 8060160408916991879}
+--- !u!114 &402731931109476599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4033309763155153239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a0f065d9aa34432821a1d873422810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WinPanelAnimJE
+  stars:
+  - {fileID: 6730935767368821177}
+  - {fileID: 2318536533653436991}
+  - {fileID: 3194731262438629392}
+  emptyStarScale: 0.5
+  earnedStarPopScale: 0.6
+  earnedStarSettleScale: 0.5
+  starPopDuration: 0.2
+  starSettleDuration: 0.1
+  starDelayStep: 0.15
 --- !u!1 &4283746929273944188
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +739,8 @@ GameObject:
   - component: {fileID: 8342730914994831579}
   - component: {fileID: 6924265235131662556}
   - component: {fileID: 5100793159284761112}
+  - component: {fileID: 8706755358227433477}
+  - component: {fileID: 4208284047665085799}
   m_Layer: 5
   m_Name: Retry Button
   m_TagString: Untagged
@@ -848,6 +874,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705a10e4822e74ef6842f64182c4ecef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+--- !u!114 &8706755358227433477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4283746929273944188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45280bd98334743b691837eb3a99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimaJE
+  hoverScale: 1.1
+  clickScale: 0.9
+  duration: 0.15
+  ignoreTimeScale: 1
+--- !u!114 &4208284047665085799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4283746929273944188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45280bd98334743b691837eb3a99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimJE
+  hoverScale: 1.1
+  clickScale: 0.95
+  duration: 0.15
+  ignoreTimeScale: 1
 --- !u!1 &5330532278962741706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,6 +1480,8 @@ GameObject:
   - component: {fileID: 1524763267158573207}
   - component: {fileID: 1681458499440112795}
   - component: {fileID: 7972716169594203110}
+  - component: {fileID: 6321495280879241966}
+  - component: {fileID: 1705947165975992115}
   m_Layer: 5
   m_Name: Win Panel
   m_TagString: Untagged
@@ -1510,6 +1570,50 @@ MonoBehaviour:
   - {fileID: 5396913841723483175}
   fullStar: {fileID: -2557881385059734878, guid: 8e22ffa87080044baa72e42ae6cb9309, type: 3}
   emptyStar: {fileID: 1657333097128410660, guid: 5ee869848b5104c5c89b4ad2266a77a6, type: 3}
+--- !u!114 &6321495280879241966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235935256817145464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a0f065d9aa34432821a1d873422810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WinPanelAnimJE
+  stars:
+  - {fileID: 6730935767368821177}
+  - {fileID: 2318536533653436991}
+  - {fileID: 3194731262438629392}
+  emptyStarScale: 0.5
+  earnedStarPopScale: 0.6
+  earnedStarSettleScale: 0.5
+  starPopDuration: 0.2
+  starSettleDuration: 0.1
+  starDelayStep: 0.15
+--- !u!114 &1705947165975992115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235935256817145464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a0f065d9aa34432821a1d873422810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WinPanelAnimJE
+  stars:
+  - {fileID: 6730935767368821177}
+  - {fileID: 2318536533653436991}
+  - {fileID: 3194731262438629392}
+  emptyStarScale: 0.5
+  earnedStarPopScale: 0.6
+  earnedStarSettleScale: 0.5
+  starPopDuration: 0.2
+  starSettleDuration: 0.1
+  starDelayStep: 0.15
 --- !u!1 &6874616354766157487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1852,8 @@ GameObject:
   - component: {fileID: 7933175907444354392}
   - component: {fileID: 9067122746836579612}
   - component: {fileID: 5432419558989573908}
+  - component: {fileID: 939636979735224736}
+  - component: {fileID: 1372643466926200952}
   m_Layer: 5
   m_Name: Retry Button
   m_TagString: Untagged
@@ -1881,6 +1987,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705a10e4822e74ef6842f64182c4ecef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+--- !u!114 &939636979735224736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7535051173075112691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45280bd98334743b691837eb3a99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimaJE
+  hoverScale: 1.1
+  clickScale: 0.9
+  duration: 0.15
+  ignoreTimeScale: 1
+--- !u!114 &1372643466926200952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7535051173075112691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45280bd98334743b691837eb3a99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimJE
+  hoverScale: 1.1
+  clickScale: 0.95
+  duration: 0.15
+  ignoreTimeScale: 1
 --- !u!1 &7551764301024574855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,6 +2032,8 @@ GameObject:
   - component: {fileID: 8072261990335116232}
   - component: {fileID: 7614692980551119707}
   - component: {fileID: 6845955187636488895}
+  - component: {fileID: 2772488958969004841}
+  - component: {fileID: 3113614395041788241}
   m_Layer: 5
   m_Name: Stage Manu Button
   m_TagString: Untagged
@@ -2027,6 +2167,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705a10e4822e74ef6842f64182c4ecef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+--- !u!114 &2772488958969004841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7551764301024574855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45280bd98334743b691837eb3a99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimaJE
+  hoverScale: 1.1
+  clickScale: 0.9
+  duration: 0.15
+  ignoreTimeScale: 1
+--- !u!114 &3113614395041788241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7551764301024574855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45280bd98334743b691837eb3a99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimJE
+  hoverScale: 1.1
+  clickScale: 0.95
+  duration: 0.15
+  ignoreTimeScale: 1
 --- !u!1 &7862977549210080134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,6 +2250,8 @@ GameObject:
   - component: {fileID: 9111510355705156524}
   - component: {fileID: 6973635305781047742}
   - component: {fileID: 6240289331233807179}
+  - component: {fileID: 2450271584537481572}
+  - component: {fileID: 7812356671598116197}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -2211,6 +2385,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705a10e4822e74ef6842f64182c4ecef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+--- !u!114 &2450271584537481572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333080761323569345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45280bd98334743b691837eb3a99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimaJE
+  hoverScale: 1.1
+  clickScale: 0.9
+  duration: 0.15
+  ignoreTimeScale: 1
+--- !u!114 &7812356671598116197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333080761323569345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45280bd98334743b691837eb3a99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimJE
+  hoverScale: 1.1
+  clickScale: 0.95
+  duration: 0.15
+  ignoreTimeScale: 1
 --- !u!1 &8834868368740585300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,6 +2430,8 @@ GameObject:
   - component: {fileID: 9126646636924338301}
   - component: {fileID: 6818016501337150389}
   - component: {fileID: 1752477662963684109}
+  - component: {fileID: 8652639550595874756}
+  - component: {fileID: 208354384063787758}
   m_Layer: 5
   m_Name: Next Level Button
   m_TagString: Untagged
@@ -2357,3 +2565,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705a10e4822e74ef6842f64182c4ecef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+--- !u!114 &8652639550595874756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834868368740585300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45280bd98334743b691837eb3a99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimaJE
+  hoverScale: 1.1
+  clickScale: 0.9
+  duration: 0.15
+  ignoreTimeScale: 1
+--- !u!114 &208354384063787758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834868368740585300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45280bd98334743b691837eb3a99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimJE
+  hoverScale: 1.1
+  clickScale: 0.95
+  duration: 0.15
+  ignoreTimeScale: 1
