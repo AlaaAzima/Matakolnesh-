@@ -35,7 +35,7 @@ public class SoundManager : MonoBehaviour
     private int currentMusicIndex;
     private bool playlistActive;
     private bool musicStopped = false;
-
+    private bool trackStarted = false;
 
     private void Awake()
     {
@@ -83,13 +83,29 @@ public class SoundManager : MonoBehaviour
 
     private void HandlePlaylist()
     {
+        //if (!playlistActive || musicStopped)
+        //    return;
+
+        //if (!musicSource.isPlaying && musicSource.time == 0f)
+        //{
+        //    PlayNextTrack();
+        //}
         if (!playlistActive || musicStopped)
             return;
 
-        if (!musicSource.isPlaying && musicSource.time == 0f)
+        if (musicSource.isPlaying)
         {
+            trackStarted = true;
+            return;
+        }
+
+        
+        if (trackStarted)
+        {
+            trackStarted = false;
             PlayNextTrack();
         }
+
     }
 
     private void PlayNextTrack()
