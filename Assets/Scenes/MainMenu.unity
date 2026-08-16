@@ -705,6 +705,7 @@ GameObject:
   - component: {fileID: 332452308}
   - component: {fileID: 332452307}
   - component: {fileID: 332452310}
+  - component: {fileID: 332452311}
   m_Layer: 5
   m_Name: SFX
   m_TagString: Untagged
@@ -841,6 +842,18 @@ MonoBehaviour:
   clickScale: 0.9
   duration: 0.15
   ignoreTimeScale: 1
+--- !u!114 &332452311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332452305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705a10e4822e74ef6842f64182c4ecef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
 --- !u!1 &467243449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,6 +1309,7 @@ GameObject:
   - component: {fileID: 1032125763}
   - component: {fileID: 1032125764}
   - component: {fileID: 1032125767}
+  - component: {fileID: 1032125768}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -1432,6 +1446,18 @@ MonoBehaviour:
   clickScale: 0.9
   duration: 0.15
   ignoreTimeScale: 1
+--- !u!114 &1032125768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032125762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705a10e4822e74ef6842f64182c4ecef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
 --- !u!1 &1073776042
 GameObject:
   m_ObjectHideFlags: 0

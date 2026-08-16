@@ -39,6 +39,7 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
+
         if (Instance != null)
         {
             Destroy(gameObject);
@@ -47,11 +48,12 @@ public class SoundManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+         LoadAudioSettings();
     }
 
     private void Start()
     {
-        LoadAudioSettings();
+       
         StartPlaylist();
     }
 
@@ -202,7 +204,6 @@ public static bool IsMusicMuted()
     if (Instance == null) return false;
     return Instance.musicSource.mute;
 }
-
 private void LoadAudioSettings()
 {
     bool musicEnabled = PlayerPrefs.GetInt("MusicEnabled", 1) == 1;
