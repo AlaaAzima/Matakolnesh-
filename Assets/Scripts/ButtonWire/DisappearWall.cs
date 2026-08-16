@@ -24,6 +24,7 @@ public class DisappearWall : MonoBehaviour
         for (int i = 0; i < wall.Length; i++)
         {
             wall[i].SetActive(false);
+            GameEvents.TriggerPlayVFX(VFXType.WallDisappear, wall[i].transform.position);
         }
     }
 }

@@ -17,7 +17,7 @@ public class StarUIJZ : MonoBehaviour
 
             if (isEarned)
             {
-                GameEvents.TriggerPlayVFX(VFXType.StarAchieved, stars[i].transform.position);
+                //GameEvents.TriggerPlayVFX(VFXType.StarAchieved, stars[i].transform.position);
             }
         }
     }

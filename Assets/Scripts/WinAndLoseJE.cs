@@ -22,7 +22,7 @@ public class WinAndLoseJE : MonoBehaviour
             if (!condition.IsConditionMet())
             {
                 Debug.Log($"WinAndLoseJE: Condition '{condition.GetType().Name}' is NOT met yet!");
-                return false; 
+                return false;
             }
         }
 
@@ -35,6 +35,8 @@ public class WinAndLoseJE : MonoBehaviour
         if (GameManagerJE.Instance != null && GameManagerJE.Instance.CurrentState is GameOverState)
         {
             Debug.Log("YOU LOSE!");
+            SoundManager.PlaySound(SoundType.LoseSound);
+            GameEvents.TriggerPlayVFX(VFXType.GameLose, Vector3.zero);
             return true;
         }
 

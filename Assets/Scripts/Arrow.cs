@@ -59,6 +59,7 @@ public class Arrow : MonoBehaviour
 
         StopAllCoroutines();
         StartCoroutine(IgnorePlayerTemporarily());
+
     }
 
     private IEnumerator IgnorePlayerTemporarily()
@@ -86,6 +87,7 @@ public class Arrow : MonoBehaviour
             GameEvents.TriggerArrowDestroyed();
             isRegisteredWithGameManager = false;
         }
+
     }
 
     private void Update()
@@ -104,7 +106,9 @@ public class Arrow : MonoBehaviour
         if (((1 << collision.gameObject.layer) & wallLayer) != 0)
         {
             currentBounceCount++;
-            GameEvents.TriggerPlaySound(SoundType.SpoonCollison);
+            //GameEvents.TriggerPlaySound(SoundType.SpoonCollison);
+            SoundManager.PlaySound(SoundType.SpoonCollison);
+            GameEvents.TriggerPlayVFX(VFXType.ArrowHit, collision.GetContact(0).point);
 
             if (currentBounceCount >= maxBounces)
             {
