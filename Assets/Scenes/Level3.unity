@@ -6099,6 +6099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Instruction Canvas '
       objectReference: {fileID: 0}
+    - target: {fileID: 3200805042508241169, guid: e4da9005be3a8443589e23cc8390ed12, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -43
+      objectReference: {fileID: 0}
     - target: {fileID: 4031861216068704305, guid: e4da9005be3a8443589e23cc8390ed12, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6178,6 +6182,34 @@ PrefabInstance:
     - target: {fileID: 4031861216068704305, guid: e4da9005be3a8443589e23cc8390ed12, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356999507792983040, guid: e4da9005be3a8443589e23cc8390ed12, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.81764764
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356999507792983040, guid: e4da9005be3a8443589e23cc8390ed12, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356999507792983040, guid: e4da9005be3a8443589e23cc8390ed12, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356999507792983040, guid: e4da9005be3a8443589e23cc8390ed12, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.57571906
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356999507792983040, guid: e4da9005be3a8443589e23cc8390ed12, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356999507792983040, guid: e4da9005be3a8443589e23cc8390ed12, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -174
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356999507792983040, guid: e4da9005be3a8443589e23cc8390ed12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -70.3
       objectReference: {fileID: 0}
     - target: {fileID: 5391460612882688089, guid: e4da9005be3a8443589e23cc8390ed12, type: 3}
       propertyPath: m_Camera
