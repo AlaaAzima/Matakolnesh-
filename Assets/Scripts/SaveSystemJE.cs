@@ -2,6 +2,8 @@ using UnityEngine;
 using System.IO;
 public class SaveSystemJE : MonoBehaviour
 {
+    private const int CURRENT_SAVE_VERSION = 1;
+
     private string savePath;
 
     private void Awake()
@@ -11,23 +13,25 @@ public class SaveSystemJE : MonoBehaviour
 
     public void Save(GameData data)
     {
+       data.saveVersion = CURRENT_SAVE_VERSION;
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(savePath, json);
-        Debug.Log("Game Saved");
-        Debug.Log(json);
+
     }
 
     public GameData Load()
     {
         if (!File.Exists(savePath))
-        {
-            Debug.Log("No Save File Found");
             return new GameData();
-        }
+
         string json = File.ReadAllText(savePath);
         GameData data = JsonUtility.FromJson<GameData>(json);
-        Debug.Log("Game Loaded");
-        Debug.Log(json);
+
+        if (data.saveVersion != CURRENT_SAVE_VERSION)
+        {
+            return new GameData();
+        }
+
         return data;
     }
     
