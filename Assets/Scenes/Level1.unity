@@ -4286,6 +4286,10 @@ PrefabInstance:
       propertyPath: stars3
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6623612121671085667, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
+      propertyPath: config
+      value: 
+      objectReference: {fileID: 11400000, guid: 5595b7ab8efe6b841a0975889fa041b7, type: 2}
     - target: {fileID: 7066198657308481642, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
