@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartInstructionUI
   instructionPanel: {fileID: 3168689191006864641}
+  time: 2
 --- !u!1 &2498347280079626620
 GameObject:
   m_ObjectHideFlags: 0

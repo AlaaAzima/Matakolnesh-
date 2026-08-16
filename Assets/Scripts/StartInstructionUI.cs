@@ -4,6 +4,7 @@ using System.Collections;
 public class StartInstructionUI : MonoBehaviour
 {
     [SerializeField] private GameObject instructionPanel;
+    [SerializeField] private float time ;
 
     private void Start()
     {
@@ -13,7 +14,7 @@ public class StartInstructionUI : MonoBehaviour
 
     private IEnumerator HideInstructions()
     {
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(time);
 
         instructionPanel.SetActive(false);
     }
