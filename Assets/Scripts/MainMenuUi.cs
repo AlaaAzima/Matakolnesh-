@@ -6,6 +6,19 @@ public class MainMenuUI : MonoBehaviour
 {
     [SerializeField] private Button playButton;
     [SerializeField] private Button quitButton;
+
+    [SerializeField] private Image musicIcon;
+
+    [SerializeField] private Sprite musicOnSprite;
+
+    [SerializeField] private Sprite musicOffSprite;
+
+     [SerializeField] private Image sfxIcon;
+
+    [SerializeField] private Sprite sfxOnSprite;
+
+    [SerializeField] private Sprite sfxOffSprite;
+
     private void Awake()
     {
         playButton.onClick.AddListener(() =>
@@ -21,4 +34,47 @@ public class MainMenuUI : MonoBehaviour
     }
 
 
+    private void Start()
+    {
+        UpdateMusicIcon();
+         UpdateSFXicon();
+
+    }
+
+    public void ToggleMusic()
+
+    {
+        SoundManager.ToggleMusicMute();
+        UpdateMusicIcon();
+    }
+
+    private void UpdateMusicIcon()
+
+    {
+        musicIcon.sprite = SoundManager.IsMusicMuted()
+            ? musicOffSprite
+            : musicOnSprite;
+
+    }
+
+       
+    public void ToggleSFX()
+    {
+        SoundManager.ToggleSFXMute();
+         UpdateSFXicon();
+    }
+
+    private void UpdateSFXicon()
+
+    {
+
+        sfxIcon.sprite = SoundManager.IsSFXMuted()
+
+            ? sfxOffSprite
+
+            : sfxOnSprite;
+
+    }
+
 }
+
