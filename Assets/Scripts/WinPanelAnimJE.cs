@@ -21,7 +21,7 @@ public class WinPanelAnimJE : MonoBehaviour
 
     public void PlayAnimation(int earnedStars)
     {
-       
+
         LeanTween.cancel(winPanel.gameObject);
         foreach (var star in stars)
         {
@@ -47,7 +47,7 @@ public class WinPanelAnimJE : MonoBehaviour
     {
         for (int i = 0; i < stars.Length; i++)
         {
-            if (i >= earnedStars) continue; 
+            if (i >= earnedStars) continue;
 
             int index = i;
 
@@ -57,6 +57,7 @@ public class WinPanelAnimJE : MonoBehaviour
                 .setEaseOutQuad()
                 .setOnComplete(() =>
                 {
+                    GameEvents.TriggerPlayVFX(VFXType.StarAchieved, stars[index].position);
                     LeanTween.scale(stars[index].gameObject, Vector3.one * earnedStarSettleScale, starSettleDuration)
                         .setIgnoreTimeScale(true)
                         .setEaseOutQuad();

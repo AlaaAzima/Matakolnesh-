@@ -2,23 +2,17 @@ using UnityEngine;
 
 public class LevelUnlockJE : MonoBehaviour
 {
-    [Header("Every-5-Levels Gate")]
-    [SerializeField] private int gateInterval = 5;      
-    [SerializeField] private int minStarsPerLevel = 2;  
-    [SerializeField] private int requiredLevelsMeetingMin = 3; 
+    [SerializeField] private LevelGateConfigSO config;
 
     public void UnlockNextLevel(int currentLevel)
     {
-        
-
         int nextLevel = currentLevel + 1;
 
-        
-        if (nextLevel % gateInterval == 0)
+        if (nextLevel % config.gateInterval == 0)
         {
             if (!CanUnlockGatedLevel(currentLevel))
             {
-                Debug.Log($"Level {nextLevel} locked. Get at least {minStarsPerLevel} stars on {requiredLevelsMeetingMin} previous levels to unlock it.");
+                Debug.Log($"Level {nextLevel} locked. Get at least {config.minStarsPerLevel} stars on {config.requiredLevelsMeetingMin} previous levels to unlock it.");
                 return;
             }
         }
@@ -28,20 +22,16 @@ public class LevelUnlockJE : MonoBehaviour
         Debug.Log("Level " + nextLevel + " Unlocked");
     }
 
-    
     public bool CanUnlockGatedLevel(int currentLevel)
     {
         int[] levelStars = GameManagerJE.Instance.gameData.levelStars;
         int levelsMeetingMin = 0;
-
         for (int i = 0; i < currentLevel; i++)
         {
             if (i >= levelStars.Length) break;
-
-            if (levelStars[i] >= minStarsPerLevel)
+            if (levelStars[i] >= config.minStarsPerLevel)
                 levelsMeetingMin++;
         }
-
-        return levelsMeetingMin >= requiredLevelsMeetingMin;
+        return levelsMeetingMin >= config.requiredLevelsMeetingMin;
     }
 }

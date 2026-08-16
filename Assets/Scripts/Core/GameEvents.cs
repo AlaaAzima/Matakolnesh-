@@ -1,4 +1,19 @@
 using System;
+using UnityEngine;
+
+
+public enum VFXType
+{
+    ArrowShoot,
+    ArrowHit,
+    EnemyDeath,
+    PlayerDeath,
+    WallAppear,
+    WallDisappear,
+    GameWin,
+    GameLose,
+    StarAchieved
+}
 
 public static class GameEvents
 {
@@ -19,6 +34,10 @@ public static class GameEvents
     public static event Action<SoundType> OnPlaySound;
     public static void TriggerPlaySound(SoundType type) => OnPlaySound?.Invoke(type);
 
+    // VFX Events
+    public static event Action<VFXType, Vector3> OnPlayVFX;
+    public static void TriggerPlayVFX(VFXType type, Vector3 position) => OnPlayVFX?.Invoke(type, position);
+
     // Call this from GameManager OnDestroy to prevent memory leaks when reloading scenes
     public static void Clear()
     {
@@ -27,5 +46,6 @@ public static class GameEvents
         OnArrowDestroyed = null;
         OnPlayerDied = null;
         OnPlaySound = null;
+        OnPlayVFX = null;
     }
 }

@@ -56,10 +56,13 @@ public class Bow : MonoBehaviour
         trajectoryPredictor.HideTrajectory();
 
         Arrow arrow = ArrowPool.Instance.GetArrow(shotPoint.position, shotPoint.rotation);
-        SoundManager.PlaySound(SoundType.PlayerShoot);
+        GameEvents.TriggerPlaySound(SoundType.PlayerShoot);
+        GameEvents.TriggerPlayVFX(VFXType.ArrowShoot, shotPoint.position);
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
 
         GameManagerJE.Instance.ArrowShot();
+        SoundManager.PlaySound(SoundType.PlayerShoot);
+
         rb.linearVelocity = shotPoint.right * arrowSpeed;
     }
 }
