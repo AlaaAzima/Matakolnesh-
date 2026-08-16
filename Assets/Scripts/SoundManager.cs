@@ -37,10 +37,6 @@ public class SoundManager : MonoBehaviour
     private bool musicStopped = false;
     private bool trackStarted = false;
 
-    private bool sfxMuted = false;
-private float previousSFXVolume = 1f;
-
-
     private void Awake()
     {
         if (Instance != null)
@@ -55,6 +51,7 @@ private float previousSFXVolume = 1f;
 
     private void Start()
     {
+        LoadAudioSettings();
         StartPlaylist();
     }
 
@@ -177,72 +174,58 @@ private float previousSFXVolume = 1f;
         Instance.PlayCurrentTrack();
     }
 
-//     public static void ToggleMusicMute()
-// {
-//     if (Instance == null) return;
-
-//     Instance.musicMuted = !Instance.musicMuted;
-
-//     if (Instance.musicMuted)
-//     {
-//         Instance.previousMusicVolume = Instance.musicSource.volume;
-//         Instance.musicSource.volume = 0f;
-//     }
-//     else
-//     {
-//         Instance.musicSource.volume = Instance.previousMusicVolume;
-//     }
-// }
-
-// public static bool IsMusicMuted()
-// {
-//     if (Instance == null) return false;
-
-//     return Instance.musicMuted;
-// }
-
-
-public static void ToggleSFXMute()
-{
-    if (Instance == null) return;
-
-    Instance.sfxMuted = !Instance.sfxMuted;
-
-    if (Instance.sfxMuted)
-    {
-        Instance.previousSFXVolume = Instance.sfxSource.volume;
-        Instance.sfxSource.volume = 0f;
-    }
-    else
-    {
-        Instance.sfxSource.volume = Instance.previousSFXVolume;
-    }
-}
-
-public static bool IsSFXMuted()
-{
-    if (Instance == null) return false;
-
-    return Instance.sfxMuted;
-}
-
-
-private bool musicMuted = false;
 
 public static void ToggleMusicMute()
 {
     if (Instance == null) return;
 
-    Instance.musicMuted = !Instance.musicMuted;
+    bool currentlyEnabled = !Instance.musicSource.mute;
+    Instance.SetMusicEnabled(!currentlyEnabled);
+}
 
-    Instance.musicSource.mute = Instance.musicMuted;
+public static void ToggleSFXMute()
+{
+    if (Instance == null) return;
+
+    bool currentlyEnabled = !Instance.sfxSource.mute;
+    Instance.SetSFXEnabled(!currentlyEnabled);
+}
+
+public static bool IsSFXMuted()
+{
+    if (Instance == null) return false;
+    return Instance.sfxSource.mute;
 }
 
 public static bool IsMusicMuted()
 {
     if (Instance == null) return false;
+    return Instance.musicSource.mute;
+}
 
-    return Instance.musicMuted;
+private void LoadAudioSettings()
+{
+    bool musicEnabled = PlayerPrefs.GetInt("MusicEnabled", 1) == 1;
+    bool sfxEnabled = PlayerPrefs.GetInt("SFXEnabled", 1) == 1;
+
+    musicSource.mute = !musicEnabled;
+    sfxSource.mute = !sfxEnabled;
+}
+
+public void SetMusicEnabled(bool enabled)
+{
+    musicSource.mute = !enabled;
+
+    PlayerPrefs.SetInt("MusicEnabled", enabled ? 1 : 0);
+    PlayerPrefs.Save();
+}
+
+public void SetSFXEnabled(bool enabled)
+{
+    sfxSource.mute = !enabled;
+
+    PlayerPrefs.SetInt("SFXEnabled", enabled ? 1 : 0);
+    PlayerPrefs.Save();
 }
 
 
