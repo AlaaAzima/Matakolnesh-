@@ -38,6 +38,7 @@ public class PlayerDeathJZ : MonoBehaviour, IDeath
         GameEvents.TriggerPlayerDied();
 
 
+
         if (archerAim != null)
         {
             archerAim.enabled = false;
@@ -58,6 +59,7 @@ public class PlayerDeathJZ : MonoBehaviour, IDeath
         }
 
         SoundManager.PlaySound(SoundType.PlayerDealth);
+        GameEvents.TriggerPlayVFX(VFXType.PlayerDeath, transform.position);
         CameraShakeJE.Instance.Shake();
         Destroy(gameObject, destroyDelay);
     }
