@@ -5991,6 +5991,10 @@ PrefabInstance:
       propertyPath: stars3
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6623612121671085667, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
+      propertyPath: config
+      value: 
+      objectReference: {fileID: 11400000, guid: 5595b7ab8efe6b841a0975889fa041b7, type: 2}
     - target: {fileID: 7066198657308481642, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6529,11 +6533,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1086750972820650138, guid: 0f35a5fdb70811548a30ebb2976283cf, type: 3}
       propertyPath: m_Radius
-      value: 4.1742325
+      value: 5.670111
       objectReference: {fileID: 0}
     - target: {fileID: 1086750972820650138, guid: 0f35a5fdb70811548a30ebb2976283cf, type: 3}
       propertyPath: m_Offset.x
-      value: 0.15473247
+      value: 0.13366461
       objectReference: {fileID: 0}
     - target: {fileID: 1086750972820650138, guid: 0f35a5fdb70811548a30ebb2976283cf, type: 3}
       propertyPath: m_Offset.y
