@@ -33,6 +33,8 @@ public class WLGamePanelJZ : MonoBehaviour
         {
             starUI.DisplayStars(earnedStars);
             SoundManager.PlaySound(SoundType.WinSound);
+            GameEvents.TriggerPlayVFX(VFXType.GameWin, winPanel.transform.position);
+
         }
 
         Time.timeScale = 0f;

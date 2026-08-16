@@ -58,6 +58,7 @@ public class WinPanelAnimJE : MonoBehaviour
                 .setOnComplete(() =>
                 {
                     GameEvents.TriggerPlayVFX(VFXType.StarAchieved, stars[index].position);
+                    SoundManager.PlaySound(SoundType.stars);
                     LeanTween.scale(stars[index].gameObject, Vector3.one * earnedStarSettleScale, starSettleDuration)
                         .setIgnoreTimeScale(true)
                         .setEaseOutQuad();

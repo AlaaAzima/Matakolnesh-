@@ -45,7 +45,6 @@ public static class GameEvents
         OnArrowSpawned = null;
         OnArrowDestroyed = null;
         OnPlayerDied = null;
-        OnPlaySound = null;
-        OnPlayVFX = null;
+
     }
 }

@@ -13,7 +13,6 @@ public class VFXManager : MonoBehaviour
     }
 
     [Header("VFX Prefabs")]
-    [Tooltip("Map each VFXType to a ParticleSystem prefab here.")]
     [SerializeField] private VFXMapping[] vfxMappings;
 
     private Dictionary<VFXType, ParticleSystem> vfxDictionary;
@@ -23,11 +22,12 @@ public class VFXManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            // DontDestroyOnLoad(gameObject); // Uncomment if manager is persistent across scenes
+            DontDestroyOnLoad(gameObject);
             InitializeDictionary();
         }
         else
         {
+
             Destroy(gameObject);
         }
     }
@@ -37,7 +37,7 @@ public class VFXManager : MonoBehaviour
         vfxDictionary = new Dictionary<VFXType, ParticleSystem>();
         foreach (var mapping in vfxMappings)
         {
-            if (!vfxDictionary.ContainsKey(mapping.type))
+            if (mapping.prefab != null && !vfxDictionary.ContainsKey(mapping.type))
             {
                 vfxDictionary.Add(mapping.type, mapping.prefab);
             }
@@ -46,6 +46,8 @@ public class VFXManager : MonoBehaviour
 
     private void OnEnable()
     {
+
+        GameEvents.OnPlayVFX -= HandlePlayVFX;
         GameEvents.OnPlayVFX += HandlePlayVFX;
     }
 
@@ -60,23 +62,23 @@ public class VFXManager : MonoBehaviour
         {
             if (prefab != null)
             {
-                // Note: For a massive scale game, we would use Object Pooling here (like ArrowPool).
-                // For now, Instantiate is used, and the ParticleSystem must be set to "Stop Action -> Destroy" in Unity.
+
                 ParticleSystem vfxInstance = Instantiate(prefab, position, Quaternion.identity);
 
-                // Fallback in case "Stop Action -> Destroy" is not set in the inspector.
-                // It destroys the GameObject after the duration of the particle system.
+
+                if (type == VFXType.StarAchieved || type == VFXType.GameWin || type == VFXType.GameLose)
+                {
+                    Canvas currentCanvas = FindObjectOfType<Canvas>();
+                    if (currentCanvas != null)
+                    {
+                        vfxInstance.transform.SetParent(currentCanvas.transform, false);
+                        vfxInstance.transform.position = position;
+                    }
+                }
+
                 var main = vfxInstance.main;
                 Destroy(vfxInstance.gameObject, main.duration + main.startLifetime.constantMax);
             }
-            else
-            {
-                Debug.LogWarning($"[VFXManager] Prefab for {type} is null! Please assign it in the Inspector.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning($"[VFXManager] Unhandled VFX Type: {type}. Add it to the VFXManager's array in the Inspector.");
         }
     }
 }

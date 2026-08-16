@@ -7,7 +7,7 @@ public class AppearWall : MonoBehaviour
 
     private void Awake()
     {
-        button=GetComponent<ButtonJZ>();
+        button = GetComponent<ButtonJZ>();
     }
     private void OnEnable()
     {
@@ -21,9 +21,10 @@ public class AppearWall : MonoBehaviour
 
     public void Appear()
     {
-        for(int i=0; i<wall.Length; i++)
+        for (int i = 0; i < wall.Length; i++)
         {
             wall[i].SetActive(true);
+            GameEvents.TriggerPlayVFX(VFXType.WallAppear, wall[i].transform.position);
         }
     }
 }
