@@ -6595,7 +6595,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7, y: 1.65}
+    oldSize: {x: 9.89, y: 9.16}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6621,7 +6621,7 @@ MonoBehaviour:
   affectedLayers:
     serializedVersion: 2
     m_Bits: 512
-  explosionEffect: {fileID: 0}
+  explosionEffect: {fileID: 4222606600419231085, guid: ef43e5aef41c142fb85a7658a397dc75, type: 3}
   button: {fileID: 1204091518}
 --- !u!212 &802273374
 SpriteRenderer:
@@ -6672,7 +6672,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6473384135146251842, guid: 7eedfa3aa2a88584f8bebbca772b2a2b, type: 3}
+  m_Sprite: {fileID: 47914125946255306, guid: 0a86d832a2e5345e7ab0563cc80f55d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6692,8 +6692,8 @@ Transform:
   m_GameObject: {fileID: 802273371}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.86, y: 1.04, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.58, y: 1.28, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.29, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
