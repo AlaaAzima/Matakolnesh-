@@ -36,45 +36,47 @@ public class MainMenuUI : MonoBehaviour
 
     private void Start()
     {
-        UpdateMusicIcon();
-         UpdateSFXicon();
+         RefreshUI();
 
     }
 
-    public void ToggleMusic()
+    public void RefreshUI()
 
     {
-        SoundManager.ToggleMusicMute();
-        UpdateMusicIcon();
-    }
 
-    private void UpdateMusicIcon()
+        if (SoundManager.Instance == null)
 
-    {
+            return;
+
         musicIcon.sprite = SoundManager.IsMusicMuted()
+
             ? musicOffSprite
+
             : musicOnSprite;
-
-    }
-
-       
-    public void ToggleSFX()
-    {
-        SoundManager.ToggleSFXMute();
-         UpdateSFXicon();
-    }
-
-    private void UpdateSFXicon()
-
-    {
 
         sfxIcon.sprite = SoundManager.IsSFXMuted()
 
             ? sfxOffSprite
 
             : sfxOnSprite;
+        }
 
+    public void ToggleMusic()
+
+    {
+        SoundManager.ToggleMusicMute();
+        RefreshUI();
+        
     }
 
+    
+       
+    public void ToggleSFX()
+    {
+        SoundManager.ToggleSFXMute();
+        RefreshUI();
+    }
+
+    
 }
 
