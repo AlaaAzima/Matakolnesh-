@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 1f8d1f5763f3f454b8d3db23fb06cf29
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6609919165201190359
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_0
+  - first:
+      213: -3872617708339908426
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_1
+  - first:
+      213: -2639473364181178508
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_2
+  - first:
+      213: -1318809334651734794
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_3
+  - first:
+      213: 2209503610307228298
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_4
+  - first:
+      213: 1795065537579913617
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_5
+  - first:
+      213: -3185897118039188249
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_6
+  - first:
+      213: -5826287347090177944
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_7
+  - first:
+      213: -4948795033779814583
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_8
+  - first:
+      213: 8671799237787956067
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_9
+  - first:
+      213: -4587184515943494245
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_10
+  - first:
+      213: -6950307187949138124
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_11
+  - first:
+      213: -6252793535052145970
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_12
+  - first:
+      213: -4398859982825245814
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_13
+  - first:
+      213: 2889981294004575173
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_14
+  - first:
+      213: -7049354697026779287
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_15
+  - first:
+      213: -7100762106620779813
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_16
+  - first:
+      213: 5481685766814267919
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_17
+  - first:
+      213: -7417979156275976684
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_18
+  - first:
+      213: -6929905101240717365
+    second: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4711
+        width: 4820
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd0ddbb5762bbb50800000000000000
+      internalID: 6609919165201190359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_1
+      rect:
+        serializedVersion: 2
+        x: 4823
+        y: 4989
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0338756b2b14ac0800000000000000
+      internalID: -3872617708339908426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_2
+      rect:
+        serializedVersion: 2
+        x: 4945
+        y: 4989
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47720e5b5f4be5bd0800000000000000
+      internalID: -2639473364181178508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_3
+      rect:
+        serializedVersion: 2
+        x: 4979
+        y: 4994
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f43d91c5e5a2bde0800000000000000
+      internalID: -1318809334651734794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_4
+      rect:
+        serializedVersion: 2
+        x: 4994
+        y: 4984
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a823e4eb3dbb9ae10800000000000000
+      internalID: 2209503610307228298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_5
+      rect:
+        serializedVersion: 2
+        x: 4970
+        y: 4980
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1911ff3889a59e810800000000000000
+      internalID: 1795065537579913617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_6
+      rect:
+        serializedVersion: 2
+        x: 4979
+        y: 4980
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec5554637b69c3d0800000000000000
+      internalID: -3185897118039188249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_7
+      rect:
+        serializedVersion: 2
+        x: 4980
+        y: 4970
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860465dd68ed42fa0800000000000000
+      internalID: -5826287347090177944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4682
+        width: 7
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94f3659f229525bb0800000000000000
+      internalID: -4948795033779814583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_9
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 307
+        width: 4699
+        height: 4318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 363badb267b685870800000000000000
+      internalID: 8671799237787956067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_10
+      rect:
+        serializedVersion: 2
+        x: 4877
+        y: 3271
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9d04089cfb0750c0800000000000000
+      internalID: -4587184515943494245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_11
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1572
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f8276df6c8b8f90800000000000000
+      internalID: -6950307187949138124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1010
+        width: 7
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca9b59986d9939a0800000000000000
+      internalID: -6252793535052145970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_13
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 990
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83350bd62c14f2c0800000000000000
+      internalID: -4398859982825245814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_14
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 302
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb9aa4dca64b1820800000000000000
+      internalID: 2889981294004575173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_15
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 302
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967ccfb8049ab2e90800000000000000
+      internalID: -7049354697026779287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 29
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd260584c76057d90800000000000000
+      internalID: -7100762106620779813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_17
+      rect:
+        serializedVersion: 2
+        x: 4926
+        y: 0
+        width: 74
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a7745692cd21c40800000000000000
+      internalID: 5481685766814267919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_18
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 19
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4162bee624b0e0990800000000000000
+      internalID: -7417979156275976684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_white-arrow-shape-isolated-on-transparent_55212049_19
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf2161d60804df90800000000000000
+      internalID: -6929905101240717365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_0: 6609919165201190359
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_1: -3872617708339908426
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_10: -4587184515943494245
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_11: -6950307187949138124
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_12: -6252793535052145970
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_13: -4398859982825245814
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_14: 2889981294004575173
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_15: -7049354697026779287
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_16: -7100762106620779813
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_17: 5481685766814267919
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_18: -7417979156275976684
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_19: -6929905101240717365
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_2: -2639473364181178508
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_3: -1318809334651734794
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_4: 2209503610307228298
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_5: 1795065537579913617
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_6: -3185897118039188249
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_7: -5826287347090177944
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_8: -4948795033779814583
+      vecteezy_white-arrow-shape-isolated-on-transparent_55212049_9: 8671799237787956067
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
