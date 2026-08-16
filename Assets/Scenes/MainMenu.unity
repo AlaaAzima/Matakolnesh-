@@ -2534,6 +2534,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9022272930104887781, guid: 68351742743b5f14d81698056e987a0b, type: 3}
+      propertyPath: vfxMappings.Array.data[2].prefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9028200390161767586, guid: 68351742743b5f14d81698056e987a0b, type: 3}
       propertyPath: m_Name
       value: VFXManager
