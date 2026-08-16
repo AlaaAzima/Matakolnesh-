@@ -63,7 +63,7 @@ public class VFXManager : MonoBehaviour
                 // Note: For a massive scale game, we would use Object Pooling here (like ArrowPool).
                 // For now, Instantiate is used, and the ParticleSystem must be set to "Stop Action -> Destroy" in Unity.
                 ParticleSystem vfxInstance = Instantiate(prefab, position, Quaternion.identity);
-                
+
                 // Fallback in case "Stop Action -> Destroy" is not set in the inspector.
                 // It destroys the GameObject after the duration of the particle system.
                 var main = vfxInstance.main;

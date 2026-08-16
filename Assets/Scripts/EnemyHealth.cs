@@ -13,6 +13,8 @@ public class EnemyHealth : MonoBehaviour, IDeath
 
         OnDeathEvent?.Invoke();
         GameEvents.TriggerPlayVFX(VFXType.EnemyDeath, transform.position);
+        SoundManager.PlaySound(SoundType.EnemyDeath);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

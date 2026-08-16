@@ -61,6 +61,8 @@ public class Bow : MonoBehaviour
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
 
         GameManagerJE.Instance.ArrowShot();
+        SoundManager.PlaySound(SoundType.PlayerShoot);
+
         rb.linearVelocity = shotPoint.right * arrowSpeed;
     }
 }

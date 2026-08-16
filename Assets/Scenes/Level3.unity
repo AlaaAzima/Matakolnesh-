@@ -5976,7 +5976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3387793135102191861, guid: 30e54e245db33e849a59dc042a236635, type: 3}
       propertyPath: destroyDelay
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 3387793135102191861, guid: 30e54e245db33e849a59dc042a236635, type: 3}
       propertyPath: explosionEffectPrefab

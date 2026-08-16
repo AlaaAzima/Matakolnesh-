@@ -58,6 +58,7 @@ MonoBehaviour:
   saveSystem: {fileID: 3263634143072604295}
   WLGamePanelJZ: {fileID: 7635452588075949121, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
   gameData:
+    saveVersion: 1
     highestUnlockedLevel: 0
     levelStars: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!114 &700253650561642536
@@ -87,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf29d7f57f29e4d99966f50e1125e0d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelUnlockJE
-  BossRequiredStars: 40
+  config: {fileID: 11400000, guid: 5595b7ab8efe6b841a0975889fa041b7, type: 2}
 --- !u!114 &3263634143072604295
 MonoBehaviour:
   m_ObjectHideFlags: 0
