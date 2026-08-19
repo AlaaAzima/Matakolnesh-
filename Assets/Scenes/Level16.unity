@@ -897,7 +897,7 @@ PrefabInstance:
       objectReference: {fileID: 222326559}
     - target: {fileID: 3144246701616785046, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: stars2
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3144246701616785046, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: stars3
