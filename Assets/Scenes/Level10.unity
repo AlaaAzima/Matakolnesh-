@@ -137,11 +137,11 @@ PrefabInstance:
       objectReference: {fileID: 1177102916}
     - target: {fileID: 3144246701616785046, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: stars2
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3144246701616785046, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: stars3
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6623612121671085667, guid: 4a4ea1deba3bb435893c7007a87d8610, type: 3}
       propertyPath: config
@@ -328,6 +328,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 549656631525910503, guid: effb78a40abdaff48a6d94ad31282b35, type: 3}
       insertIndex: -1
       addedObject: {fileID: 696192176}
+    - targetCorrespondingSourceObject: {fileID: 549656631525910503, guid: effb78a40abdaff48a6d94ad31282b35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 696192179}
+    - targetCorrespondingSourceObject: {fileID: 549656631525910503, guid: effb78a40abdaff48a6d94ad31282b35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 696192178}
+    - targetCorrespondingSourceObject: {fileID: 549656631525910503, guid: effb78a40abdaff48a6d94ad31282b35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 696192177}
   m_SourcePrefab: {fileID: 100100000, guid: effb78a40abdaff48a6d94ad31282b35, type: 3}
 --- !u!1 &510996975
 GameObject:
@@ -1165,6 +1174,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b07aa09792a17e49baaf5c5de1c3d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoundJZ
+--- !u!114 &696192177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696192175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46cf51c4ac24a364d81afff56ed97a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  destroyDelay: 1.1
+--- !u!114 &696192178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696192175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e248e1652124354db884e276e5c9b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyEffects
+--- !u!114 &696192179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696192175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e63ae0f07858a4dbf12a94439f1351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
 --- !u!1 &848849320
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,7 +2248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4654406686161142515, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -23.000183
+      value: -23.000122
       objectReference: {fileID: 0}
     - target: {fileID: 6235935256817145464, guid: ce394a8ce3390974eb439530dfaf8440, type: 3}
       propertyPath: m_IsActive
