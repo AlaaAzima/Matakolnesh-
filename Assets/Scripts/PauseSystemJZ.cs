@@ -23,7 +23,7 @@ public class PauseSystemJZ : MonoBehaviour
     {
         if (GameManagerJE.Instance == null || GameManagerJE.Instance.CurrentState is GameOverState) return;
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             TogglePause();
         }
